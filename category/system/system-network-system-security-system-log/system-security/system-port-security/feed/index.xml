@@ -1,0 +1,3395 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>System Port Security (系统端口安全) &#8211; Eternal Center</title>
+	<atom:link href="https://eternalcenter-2022-02.github.io/category/system/system-network-system-security-system-log/system-security/system-port-security/feed/" rel="self" type="application/rss+xml" />
+	<link>https://eternalcenter-2022-02.github.io/</link>
+	<description></description>
+	<lastBuildDate>Thu, 03 Feb 2022 12:24:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>[步骤] Linux SSL 证书的生成 （Let&#8217;s Encrypt certbot 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/ssl-lets-encrypt-certbot/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sun, 19 Dec 2021 15:12:46 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Basic Guidelines for Website building (网站建设基础指南)]]></category>
+		<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Django Service (服务)]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Nginx Security (安全)]]></category>
+		<category><![CDATA[Personal Website Building (个人网站建设)]]></category>
+		<category><![CDATA[Project (项目)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[Website Services (网站服务)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=19886</guid>
+
+					<description><![CDATA[步骤目录： 步骤一：将要申请 Let&#8217;s Encrypt SSL 的域名解析到要进行操作的服务器 IP 地址上 步骤二：安装 certbot 步骤三：使用 certbot 生成 Let&#8217;s Encrypt SSL 证书 步骤四：显示已经生成的 Let&#8217;s Encrypt SSL 证书 步骤五：延期 Let&#8217;s Encrypt SSL 证书5.1 显示 Let&#8217;s Encrypt SSL 证书的延期策略5.2 手动延期 Let&#8217;s Encrypt SSL 证书5.3 自动延期 Let&#8217;s Encrypt SSL 证书 步骤六：Let’s Encrypt SSL 证书的生成限制 具体的操作步骤： 步骤一：将要申请 Let&#8217;s Encrypt SSL 的域名解析到要进行操作的服务器 IP 地址上 （步骤略） &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/ssl-lets-encrypt-certbot/" class="more-link">Continue reading<span class="screen-reader-text"> "[步骤] Linux SSL 证书的生成 （Let&#8217;s Encrypt certbot 版）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="步骤目录">步骤目录：</h2>
+
+
+
+<h4 id="步骤一-将要申请-let-s-encrypt-ssl-的域名解析到要进行操作的服务器-ip-地址上">步骤一：将要申请 Let&#8217;s Encrypt SSL 的域名解析到要进行操作的服务器 IP 地址上</h4>
+
+
+
+<h4 id="步骤二-安装-certbot">步骤二：安装 certbot</h4>
+
+
+
+<h4 id="步骤三-使用-certbot-生成-let-s-encrypt-ssl-证书">步骤三：使用 certbot 生成 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<h4 id="步骤四-查看已经生成的-let-s-encrypt-ssl-证书">步骤四：显示已经生成的 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<h4 id="步骤五-延期-let-s-encrypt-ssl-证书-5-1-显示-let-s-encrypt-ssl-证书的延期策略-5-2-手动延期-let-s-encrypt-ssl-证书-5-3-自动延期-let-s-encrypt-ssl-证书">步骤五：延期 Let&#8217;s Encrypt SSL 证书<br>5.1 显示 Let&#8217;s Encrypt SSL 证书的延期策略<br>5.2 手动延期 Let&#8217;s Encrypt SSL 证书<br>5.3 自动延期 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<h4 id="步骤六-let-s-encrypt-ssl-证书的生成限制">步骤六：Let’s Encrypt SSL 证书的生成限制</h4>
+
+
+
+<h2 id="具体的操作步骤">具体的操作步骤：</h2>
+
+
+
+<h4 id="步骤一-将要申请-let-s-encrypt-ssl-的域名解析到要进行操作的服务器-ip-地址上">步骤一：将要申请 Let&#8217;s Encrypt SSL 的域名解析到要进行操作的服务器 IP 地址上</h4>
+
+
+
+<p>（步骤略）</p>
+
+
+
+<h4 id="步骤二-安装-certbot">步骤二：安装 certbot</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y install certbot</code></pre>
+
+
+
+<p>（补充：这里以在 Fedora 35 上安装 certbot 为例）</p>
+
+
+
+<h4 id="步骤三-使用-certbot-生成-let-s-encrypt-ssl-证书">步骤三：使用 certbot 生成 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># certbot certonly --email mingyu.zhu@eternalcenter.com -n --agree-tos --webroot -w /usr/share/nginx/html/ -d eternalcenter.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator webroot, Installer None
+Requesting a certificate for eternalcenter.com
+Performing the following challenges:
+http-01 challenge for eternalcenter.com
+Using the webroot path /usr/share/nginx/html for all unmatched domains.
+Waiting for verification...
+Cleaning up challenges
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/eternalcenter.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/eternalcenter.com/privkey.pem
+   Your certificate will expire on 2022-03-20. To obtain a new or
+   tweaked version of this certificate in the future, simply run
+   certbot again. To non-interactively renew *all* of your
+   certificates, run "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le</code></pre>
+
+
+
+<p>（<br>补充：这里以<br>1) 使用 mingyu.zhu@eternalcenter.com 邮箱<br>2) 以非交互式的方式<br>3) 通过给 /usr/share/nginx/html/ 网站目录里添加验证文件进行验证<br>4) 给 eternalcenter.com 域名<br>申请 Let&#8217;s Encrypt SSL 证书为例<br>）</p>
+
+
+
+<h4 id="步骤四-查看已经生成的-let-s-encrypt-ssl-证书">步骤四：显示已经生成的 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># certbot certificates
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: eternalcenter.com
+    Serial Number: 3e8cdb74a1abfbf3d535ec1c3f8cb3e4e4c
+    Key Type: RSA
+    Domains: eternalcenter.com
+    Expiry Date: 2022-03-20 13:48:48+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/eternalcenter.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/eternalcenter.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</code></pre>
+
+
+
+<p>（<br>补充：<br>1) /etc/letsencrypt/live/eternalcenter.com/fullchain.pem 是公钥<br>2) /etc/letsencrypt/live/eternalcenter.com/privkey.pem 是私钥<br>）</p>
+
+
+
+<h4 id="步骤五-延期-let-s-encrypt-ssl-证书-5-1-显示-let-s-encrypt-ssl-证书的延期策略">步骤五：延期 Let&#8217;s Encrypt SSL 证书<br>5.1 显示 Let&#8217;s Encrypt SSL 证书的延期策略</h4>
+
+
+
+<pre class="wp-block-code"><code># cat /etc/letsencrypt/renewal/eternalcenter.com.conf 
+# renew_before_expiry = 30 days
+version = 1.20.0
+archive_dir = /etc/letsencrypt/archive/eternalcenter.com
+cert = /etc/letsencrypt/live/eternalcenter.com/cert.pem
+privkey = /etc/letsencrypt/live/eternalcenter.com/privkey.pem
+chain = /etc/letsencrypt/live/eternalcenter.com/chain.pem
+fullchain = /etc/letsencrypt/live/eternalcenter.com/fullchain.pem</code></pre>
+
+
+
+<p>（补充：可以看出 Let&#8217;s Encrypt SSL 证书是在过期前 30 天才能更新）</p>
+
+
+
+<h4 id="5-2-手动延期-let-s-encrypt-ssl-证书">5.2 手动延期 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># /usr/bin/certbot renew</code></pre>
+
+
+
+<p>（补充：这里以延期 Let&#8217;s Encrypt SSL 证书为例）</p>
+
+
+
+<h4 id="5-3-自动延期-let-s-encrypt-ssl-证书">5.3 自动延期 Let&#8217;s Encrypt SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># crontab -e</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+0 0 */30 * * /usr/bin/certbot renew</code></pre>
+
+
+
+<p>（补充：这里以每过 30 天的 0 时 0 分延期 Let&#8217;s Encrypt SSL 证书为例）</p>
+
+
+
+<h4 id="步骤六-let-s-encrypt-ssl-证书的生成限制">步骤六：Let’s Encrypt SSL 证书的生成限制</h4>
+
+
+
+<p>1) 一个域名申请次数不能超过 5 次/周<br>2) 允许申请失败次数不能超过 5 次/时<br>3) 属于同一个顶级域名的二级域名申请次数不能超过 20 次/周<br>4) 申请请求频率不能超过 20 次/秒<br>5) 一个 IP 地址创建用户个数不能超过 10 个/3 小时<br>6) 一个用户最多 pending 审核的数不能超过 300 个</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] SELinux  的启用 （openSUSE &#038; SLE  版） （不建议）</title>
+		<link>https://eternalcenter-2022-02.github.io/selinux-opensuse-sle/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 01 Jun 2021 08:50:14 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[SELinux]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File Security (系统文件安全)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=14516</guid>
+
+					<description><![CDATA[软件准备： 在 SELinuxProject 的官网上下载 SELinux 策略 UseRefpolicy： https://github.com/SELinuxProject/refpolicy/wiki/UseRefpolicy 注意： 1) 如果使用此文的方法将 openSUSE &#38; SLE 的 SELinux 设置为 Enforcing 则系统将无法设置 IP 地址2) 如果使用此文的方法开启了 SELinux 并且将所有的布尔（boolean）值开启，则系统将无法关机，开启所有布尔值的方法：# for i in semanage boolean -l &#124; awk '{print $1}'; do echo $i;setsebool -P $i 1; done 正文： 步骤目录： 步骤一：安装 SELinux 组件 步骤二：安装 SELinux 策略2.1 解压包含 SELinux 策略的压缩包2.2 将 SELinux 策略移动到 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/selinux-opensuse-sle/" class="more-link">Continue reading<span class="screen-reader-text"> "[步骤] SELinux  的启用 （openSUSE &#038; SLE  版） （不建议）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="软件准备">软件准备：</h2>
+
+
+
+<p>在 SELinuxProject 的官网上下载 SELinux 策略 UseRefpolicy：</p>
+
+
+
+<p class="has-text-align-center"><a href="https://github.com/SELinuxProject/refpolicy/wiki/UseRefpolicy" target="_blank" rel="noreferrer noopener">https://github.com/SELinuxProject/refpolicy/wiki/UseRefpolicy</a></p>
+
+
+
+<h2 id="注意">注意：</h2>
+
+
+
+<p>1) 如果使用此文的方法将 openSUSE &amp; SLE 的 SELinux 设置为 Enforcing 则系统将无法设置 IP 地址<br>2) 如果使用此文的方法开启了 SELinux 并且将所有的布尔（boolean）值开启，则系统将无法关机，开启所有布尔值的方法：# for i in <code>semanage boolean -l | awk '{print $1}'</code>; do echo $i;setsebool -P $i 1; done</p>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 id="正文">正文：</h2>
+
+
+
+<h2 id="步骤目录">步骤目录：</h2>
+
+
+
+<h4 id="步骤一-安装-selinux-组件">步骤一：安装 SELinux 组件</h4>
+
+
+
+<h4 id="步骤二-安装-selinux-策略-2-1-解压包含-selinux-策略的压缩包-2-2-将-selinux-策略移动到-selinux-配置文件的位置-2-3-进入到和-selinux-策略相同目录下-2-4-显示-selinux-策略的安装手册-2-5-创建-selinux-策略的配置文件-2-6-创建-selinux-策略-2-7-编译-selinux-策略-2-8-安装-selinux-策略">步骤二：安装 SELinux 策略<br>2.1 解压包含 SELinux 策略的压缩包<br>2.2 将 SELinux 策略移动到 SELinux 配置文件的位置<br>2.3 进入到和 SELinux 策略相同目录下<br>2.4 显示 SELinux 策略的安装手册<br>2.5 创建 SELinux 策略的配置文件<br>2.6 创建 SELinux 策略<br>2.7 编译 SELinux 策略<br>2.8 安装 SELinux 策略</h4>
+
+
+
+<h4 id="步骤三-配置-selinux-配置文件-3-1-在-selinux-配置文件中将-selinux-设置为-permissive-状态-3-2-在系统内核中禁止使用-apparmor-使用-selinux-并且将-selinux-状态设置为-permissive-3-2-1-设置-grub-文件-3-2-2-让刚刚设置的-grub-文件生效-3-3-刷新系统内所有文件的标签">步骤三：配置 SELinux 配置文件<br>3.1 在 SELinux 配置文件中将 SELinux 设置为 Permissive 状态<br>3.2 在系统内核中禁止使用 AppArmor 使用 SELinux 并且将 SELinux 状态设置为 Permissive<br>3.2.1 设置 grub 文件<br>3.2.2 让刚刚设置的 grub 文件生效<br>3.3 刷新系统内所有文件的标签</h4>
+
+
+
+<h4 id="步骤四-重启系统让-selinux-生效">步骤四：重启系统让 SELinux 生效</h4>
+
+
+
+<h2 id="具体的操作步骤">具体的操作步骤：</h2>
+
+
+
+<h4 id="步骤一-安装-selinux-组件">步骤一：安装 SELinux 组件</h4>
+
+
+
+<pre class="wp-block-code"><code># zypper in libselinux1 libsemanage1 libsepol-devel libsepol1 libselinux-devel mcstrans libselinux1-32bit policycoreutils checkpolicy libsemanage-devel setools-tcl setools-libs setools-java setools-devel setools-console selinux-tools python3-policycoreutils python3-selinux python3-semanage python3-setools restorecond</code></pre>
+
+
+
+<h4 id="步骤二-安装-selinux-策略-2-1-解压包含-selinux-策略的压缩包">步骤二：安装 SELinux 策略<br>2.1 解压包含 SELinux 策略的压缩包</h4>
+
+
+
+<pre class="wp-block-code"><code># tar -xvf refpolicy-2.20210203.tar.bz2</code></pre>
+
+
+
+<p>（补充：这里以解压 refpolicy-2.20210203.tar.bz2 压缩包为例）</p>
+
+
+
+<h4 id="2-2-将-selinux-策略移动到-selinux-配置文件的位置">2.2 将 SELinux 策略移动到 SELinux 配置文件的位置</h4>
+
+
+
+<pre class="wp-block-code"><code># mv refpolicy /etc/selinux/</code></pre>
+
+
+
+<h4 id="2-3-进入到和-selinux-策略相同目录下">2.3 进入到和 SELinux 策略相同目录下</h4>
+
+
+
+<pre class="wp-block-code"><code># cd /etc/selinux/refpolicy/</code></pre>
+
+
+
+<h4 id="2-4-显示-selinux-策略的安装手册">2.4 显示 SELinux 策略的安装手册</h4>
+
+
+
+<pre class="wp-block-code"><code># cat INSTALL</code></pre>
+
+
+
+<h4 id="2-5-创建-selinux-策略的配置文件">2.5 创建 SELinux 策略的配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># make conf</code></pre>
+
+
+
+<h4 id="2-6-创建-selinux-策略">2.6 创建 SELinux 策略</h4>
+
+
+
+<pre class="wp-block-code"><code># make policy</code></pre>
+
+
+
+<h4 id="2-7-编译-selinux-策略">2.7 编译 SELinux 策略</h4>
+
+
+
+<pre class="wp-block-code"><code># make install</code></pre>
+
+
+
+<h4 id="2-8-安装-selinux-策略">2.8 安装 SELinux 策略</h4>
+
+
+
+<pre class="wp-block-code"><code># make load</code></pre>
+
+
+
+<h4 id="步骤三-配置-selinux-配置文件-3-1-在-selinux-配置文件中将-selinux-设置为-permissive-状态">步骤三：配置 SELinux 配置文件<br>3.1 在 SELinux 配置文件中将 SELinux 设置为 Permissive 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>创建以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code># This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#     enforcing - SELinux security policy is enforced.
+#     permissive - SELinux prints warnings instead of enforcing.
+#     disabled - No SELinux policy is loaded.
+SELINUX=permissive
+# SELINUXTYPE= can take one of three values:
+#     targeted - Targeted processes are protected,
+#     minimum - Modification of targeted policy. Only selected processes are protected.
+#     mls - Multi Level Security protection.
+SELINUXTYPE=refpolicy</code></pre>
+
+
+
+<h4 id="3-2-在系统内核中禁止使用-apparmor-使用-selinux-并且将-selinux-状态设置为-permissive-3-2-1-设置-grub-文件">3.2 在系统内核中禁止使用 AppArmor 使用 SELinux 并且将 SELinux 状态设置为 Permissive<br>3.2.1 设置 grub 文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/default/grub</code></pre>
+
+
+
+<p>在这一行里：</p>
+
+
+
+<pre class="wp-block-code"><code>GRUB_CMDLINE_LINUX_DEFAULT="......"</code></pre>
+
+
+
+<pre class="wp-block-code"><code>添加以下内容：</code></pre>
+
+
+
+<pre class="wp-block-code"><code>GRUB_CMDLINE_LINUX_DEFAULT="...... security=selinux selinux=1 enforcing=0"</code></pre>
+
+
+
+<h4 id="3-2-2-让刚刚设置的-grub-文件生效">3.2.2 让刚刚设置的 grub 文件生效</h4>
+
+
+
+<pre class="wp-block-code"><code># grub2-mkconfig -o /boot/grub2/grub.cfg</code></pre>
+
+
+
+<h4 id="3-3-刷新系统内所有文件的标签">3.3 刷新系统内所有文件的标签</h4>
+
+
+
+<pre class="wp-block-code"><code># restorecon -Rp /</code></pre>
+
+
+
+<h4 id="步骤四-重启系统让-selinux-生效">步骤四：重启系统让 SELinux 生效</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 id="参考文献">参考文献：</h2>
+
+
+
+<p class="has-text-align-center">https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-selinux.html</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux SELinux 状态的设置</title>
+		<link>https://eternalcenter-2022-02.github.io/selinux-state/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 31 May 2021 13:37:41 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[SELinux]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File Security (系统文件安全)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=14456</guid>
+
+					<description><![CDATA[内容目录： 内容一：SELinux 的状态 内容二：永久切换 SELinux 状态2.1 将 SELinux 永久切换至 Disabled 状态2.1.1 修改 SELinux 配置文件2.1.2 重启系统2.1.3 显示 SELinux 状态2.2 将 SELinux 永久切换至 Permissive 状态2.2.1 修改 SELinux 配置文件2.2.2 重启系统2.2.3 显示 SELinux 状态2.3 将 SELinux 永久切换至 Enforcing 状态2.3.1 修改 SELinux 配置文件2.3.2 重启系统2.3.3 显示 SELinux 状态 内容三：临时切换 SELinux 状态3.1 临时切换到 Permissive 状态3.1.1 临时切换到 Permissive 状态3.1.2 显示 SELinux 状态3.2 临时切换到 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/selinux-state/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux SELinux 状态的设置"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-selinux-的状态">内容一：SELinux 的状态</h4>
+
+
+
+<h4 id="内容二-永久切换-selinux-状态-2-1-将-selinux-永久切换至-disabled-状态-2-1-1-修改-selinux-配置文件-2-1-2-重启系统-2-1-3-显示-selinux-状态-2-2-将-selinux-永久切换至-permissive-状态-2-2-1-修改-selinux-配置文件-2-2-2-重启系统-2-2-3-显示-selinux-状态-2-3-将-selinux-永久切换至-enforcing-状态-2-3-1-修改-selinux-配置文件-2-3-2-重启系统-2-3-3-显示-selinux-状态">内容二：永久切换 SELinux 状态<br>2.1 将 SELinux 永久切换至 Disabled 状态<br>2.1.1 修改 SELinux 配置文件<br>2.1.2 重启系统<br>2.1.3 显示 SELinux 状态<br>2.2 将 SELinux 永久切换至 Permissive 状态<br>2.2.1 修改 SELinux 配置文件<br>2.2.2 重启系统<br>2.2.3 显示 SELinux 状态<br>2.3 将 SELinux 永久切换至 Enforcing 状态<br>2.3.1 修改 SELinux 配置文件<br>2.3.2 重启系统<br>2.3.3 显示 SELinux 状态</h4>
+
+
+
+<h4 id="内容三-临时切换-selinux-状态-3-1-临时切换到-permissive-状态-3-1-1-临时切换到-permissive-状态-3-1-2-显示-selinux-状态-3-2-临时切换到-enforcing-状态-3-2-1-临时切换到-enforcing-状态-3-2-2-显示-selinux-状态">内容三：临时切换 SELinux 状态<br>3.1 临时切换到 Permissive 状态<br>3.1.1 临时切换到 Permissive 状态<br>3.1.2 显示 SELinux 状态<br>3.2 临时切换到 Enforcing 状态<br>3.2.1 临时切换到 Enforcing 状态<br>3.2.2 显示 SELinux 状态</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-selinux-的状态">内容一：SELinux 的状态</h4>
+
+
+
+<p>1) Disabled：完全关闭 SELinux<br>2) Permissive：即使违反了策略也依旧可以执行，但是违反策略的记录会被记录在日志中<br>3) Enforcing：如果违反了策略就不能之行</p>
+
+
+
+<h4 id="内容二-永久切换-selinux-状态-2-1-将-selinux-永久切换至-disabled-状态-2-1-1-修改-selinux-配置文件">内容二：永久切换 SELinux 状态<br>2.1 将 SELinux 永久切换至 Disabled 状态<br>2.1.1 修改 SELinux 配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=......
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=disabled
+......</code></pre>
+
+
+
+<h4 id="2-1-2-重启系统">2.1.2 重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4 id="2-1-3-显示-selinux-状态">2.1.3 显示 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce 
+Disabled</code></pre>
+
+
+
+<h4 id="2-2-将-selinux-永久切换至-permissive-状态-2-2-1-修改-selinux-配置文件">2.2 将 SELinux 永久切换至 Permissive 状态<br>2.2.1 修改 SELinux 配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=......
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=permissive
+......</code></pre>
+
+
+
+<h4 id="2-2-2-重启系统">2.2.2 重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4 id="2-2-3-显示-selinux-状态">2.2.3 显示 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce 
+Permissive</code></pre>
+
+
+
+<h4 id="2-3-将-selinux-永久切换至-enforcing-状态-2-3-1-修改-selinux-配置文件">2.3 将 SELinux 永久切换至 Enforcing 状态<br>2.3.1 修改 SELinux 配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=......
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=enforcing
+......</code></pre>
+
+
+
+<h4 id="2-3-2-重启系统">2.3.2 重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4 id="2-3-3-显示-selinux-状态">2.3.3 显示 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce 
+Enforcing</code></pre>
+
+
+
+<h4 id="内容三-临时切换-selinux-状态-3-1-临时切换到-permissive-状态-3-1-1-临时切换到-permissive-状态">内容三：临时切换 SELinux 状态<br>3.1 临时切换到 Permissive 状态<br>3.1.1 临时切换到 Permissive 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># setenfoce 0</code></pre>
+
+
+
+<p>（<br>注意：<br>1) 系统重启后失效<br>2) 只能从 Enforcing 状态切换到 Permissive 状态<br>）</p>
+
+
+
+<h4 id="3-1-2-显示-selinux-状态">3.1.2 显示 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce 
+Permissive</code></pre>
+
+
+
+<h4 id="3-2-临时切换到-enforcing-状态-3-2-1-临时切换到-enforcing-状态">3.2 临时切换到 Enforcing 状态<br>3.2.1 临时切换到 Enforcing 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># setenfoce 1</code></pre>
+
+
+
+<p>（<br>注意：<br>1) 系统重启后失效<br>2) 只能从 Permissive 状态切换到 Enforcing 状态<br>）</p>
+
+
+
+<h4 id="3-2-2-显示-selinux-状态">3.2.2 显示 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce 
+Enforcing</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 检测服务器某个端口有没有启动</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-port-check/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 18 May 2021 06:23:57 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Monitor (监控)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=14314</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：检测服务器某个端口有没有启动作用：检测服务器某个端口有没有启动 使用方法：1. 在此脚本的分割线内写入相应的内容2. 给此脚本添加执行权限3. 执行此脚本4. 如果被检测的端口被启动则会被记录在指定文件里 脚本分割线里的变量：1. checkport=&#8217;7111&#8242; #被检测的端口2. logfile=&#8217;checkportlog.txt&#8217; #记录文件 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：检测服务器某个端口有没有启动<br>作用：检测服务器某个端口有没有启动</p>
+
+
+
+<p>使用方法：<br>1. 在此脚本的分割线内写入相应的内容<br>2. 给此脚本添加执行权限<br>3. 执行此脚本<br>4. 如果被检测的端口被启动则会被记录在指定文件里</p>
+
+
+
+<p>脚本分割线里的变量：<br>1. checkport=&#8217;7111&#8242; #被检测的端口<br>2. logfile=&#8217;checkportlog.txt&#8217; #记录文件</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+checkport='7111'
+logfile='checkportlog.txt'
+####################### Separator ########################
+
+a=`/sbin/ss -ntulap | grep udp | grep $checkport | awk '{print $7}' | awk -F'"' '{print $2}'`
+
+if &#91; -n "$a" ];then
+       echo `date` >> $logfile
+       echo $checkport >> $logfile
+       echo `/sbin/ss -ntulap | grep udp | grep $checkport | awk '{print $7}' | awk -F'"' '{print $2}'` >> $logfile
+       echo >> $logfile
+fi</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux SSL 证书的生成 （openssl 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/ssl-openssl/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Tue, 20 Apr 2021 07:50:42 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[Basic Guidelines for Website building (网站建设基础指南)]]></category>
+		<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Django Service (服务)]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Nginx Security (安全)]]></category>
+		<category><![CDATA[Personal Website Building (个人网站建设)]]></category>
+		<category><![CDATA[Project (项目)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[Website Services (网站服务)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=14032</guid>
+
+					<description><![CDATA[内容一：生成 SSL 证书1.1 交互式生成 SSL 证书 （补充：这里以同时生成长度 4096 位，加密格式为 512 的私钥 eternalcenter.com.key 和公钥 eternalcenter.com.csr 为例） 1.2 非交互式生成 SSL 证书 （补充：这里以同时生成1) 长度为 4096 位2) 加密格式为 5123) 国家为 CN4) 州或省为 Sichuan5) 城市为 Chengdu6) 组织为 Eternal Center7) 部门为 Mingyu Zhu8) 域名为 eternalcenter.com9) 邮箱地址为 contact@mingyuzhu.com的私钥 eternalcenter.com.key 和公钥 eternalcenter.com.csr 为例） 内容二：测试 SSL 证书]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：生成 SSL 证书<br>1.1 交互式生成 SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># openssl req -nodes -newkey rsa:4096 -sha512 -keyout eternalcenter.com.key -out eternalcenter.com.csr</code></pre>
+
+
+
+<p>（补充：这里以同时生成长度 4096 位，加密格式为 512 的私钥 eternalcenter.com.key 和公钥 eternalcenter.com.csr 为例）</p>
+
+
+
+<h4>1.2 非交互式生成 SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># openssl req -nodes -newkey rsa:4096 -sha512 -out eternalcenter.com.csr -keyout eternalcenter.com.key -subj "/C=CN/ST=Sichuan/L=Chengdu/O=Eternal Center/OU=Mingyu Zhu/CN=eternalcenter.com/emailAddress=contact@mingyuzhu.com"</code></pre>
+
+
+
+<p>（<br>补充：这里以同时生成<br>1) 长度为 4096 位<br>2) 加密格式为 512<br>3) 国家为 CN<br>4) 州或省为 Sichuan<br>5) 城市为 Chengdu<br>6) 组织为 Eternal Center<br>7) 部门为 Mingyu Zhu<br>8) 域名为 eternalcenter.com<br>9) 邮箱地址为 contact@mingyuzhu.com<br>的私钥 eternalcenter.com.key 和公钥 eternalcenter.com.csr 为例<br>）</p>
+
+
+
+<h4>内容二：测试 SSL 证书</h4>
+
+
+
+<pre class="wp-block-code"><code># openssl req -in eternalcenter.com.csr -noout -text</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 批量检测服务器 TCP 端口的联通状态 （nc 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-tcp-check-nc/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 25 Jan 2021 10:34:16 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Monitor (监控)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=13243</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：批量检测服务器 TCP 端口的联通状态作用：批量检测服务器 TCP 端口的联通状态 使用方法：1. 端口清单 $portlist 每一个端口占用一行，格式为：&#60;要联通端口号对应的 IP 地址&#62;:&#60;要联通的端口号&#62;:&#60;端口功能&#62;2. 在此脚本的分割线内写入相应的内容，并和此脚本放在同一目录下3. 给此脚本添加执行权限4. 执行此脚本，并将要测试的服务器 IP 地址跟在脚本的后面，例：. &#60;脚本名&#62; &#60;服务器 IP 地址 1&#62; &#60;服务器 IP 地址 2&#62; &#8230;&#8230; 脚本分割线里的变量：portlist=tcp_ports.txt #存放要测试的 TCP 端口的文件 注意：1. 此脚本执行前必须要先保证执行本脚本的用户能无密码 ssh 远程这些远程服务器2. 执行此脚本前确保 nc 命令已经安装 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：批量检测服务器 TCP 端口的联通状态<br>作用：批量检测服务器 TCP 端口的联通状态</p>
+
+
+
+<p>使用方法：<br>1. 端口清单 $portlist 每一个端口占用一行，格式为：&lt;要联通端口号对应的 IP 地址&gt;:&lt;要联通的端口号&gt;:&lt;端口功能&gt;<br>2. 在此脚本的分割线内写入相应的内容，并和此脚本放在同一目录下<br>3. 给此脚本添加执行权限<br>4. 执行此脚本，并将要测试的服务器 IP 地址跟在脚本的后面，例：. &lt;脚本名&gt; &lt;服务器 IP 地址 1&gt; &lt;服务器 IP 地址 2&gt; &#8230;&#8230;</p>
+
+
+
+<p>脚本分割线里的变量：<br>portlist=tcp_ports.txt #存放要测试的 TCP 端口的文件</p>
+
+
+
+<p>注意：<br>1. 此脚本执行前必须要先保证执行本脚本的用户能无密码 ssh 远程这些远程服务器<br>2. 执行此脚本前确保 nc 命令已经安装</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+
+portlist=tcp_ports.txt
+
+####################### Separator ########################
+
+for hosts in $*
+do
+
+        echo $hosts
+        ssh $hosts "which nc" &amp;> /dev/null
+
+        if &#91; $? -ne 0 ];then
+                echo -e "\033&#91;31m$hosts can not use nc !!!!!!!!!!\033&#91;0m"
+                continue
+        fi
+
+        for line in `cat $portlist`
+        do
+                ips=`echo $line | awk -F':' '{print $1}'`
+                ports=`echo $line | awk -F':' '{print $2}'`
+                remarks=`echo $line | awk -F':' '{print $3}'`
+
+                ssh $hosts "nc -z -w 3 $ips $ports"
+
+                if &#91; $? -ne 0 ];then
+                        echo -e "\033&#91;31m$ips $ports $remarks can not be connected !!!!!!!!!!\033&#91;0m"
+                else
+                        echo -e "\033&#91;32m$ips $ports $remarks can be connected\033&#91;0m"
+                fi
+
+        done
+
+done</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] VNC 数据的加密 （通过 SSH 实现）</title>
+		<link>https://eternalcenter-2022-02.github.io/vnc-ssh/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Mon, 21 Sep 2020 14:56:43 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Other Services (其他服务)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[VNC]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=10572</guid>
+
+					<description><![CDATA[内容目录： 内容一：直接通过 SSH 对 VNC 进行加密1.1 直接通过 SSH 对 VNC 进行加密的格式1.2 直接通过 SSH 对 VNC 进行加密的案例 内容二：通过非标准端口的 SSH 对 VNC 进行加密2.1 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的格式2.2 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的案例 具体的内容： 内容一：直接通过 SSH 对 VNC 进行加密1.1 直接通过 SSH 对 VNC 进行加密的格式 1.2 直接通过 SSH 对 VNC 进行加密的案例 （补充：这里以使用 eternalcenter.com 服务器上的 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/vnc-ssh/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] VNC 数据的加密 （通过 SSH 实现）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2>内容目录：</h2>
+
+
+
+<h4>内容一：直接通过 SSH 对 VNC 进行加密<br>1.1 直接通过 SSH 对 VNC 进行加密的格式<br>1.2 直接通过 SSH 对 VNC 进行加密的案例</h4>
+
+
+
+<h4>内容二：通过非标准端口的 SSH 对 VNC 进行加密<br>2.1 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的格式<br>2.2 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的案例</h4>
+
+
+
+<h2>具体的内容：</h2>
+
+
+
+<h4>内容一：直接通过 SSH 对 VNC 进行加密<br>1.1 直接通过 SSH 对 VNC 进行加密的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># vncviewer -via &lt;SSH user of VNC server>@&lt;IP address of VNC server> localhost :&lt;VNC service number></code></pre>
+
+
+
+<h4>1.2 直接通过 SSH 对 VNC 进行加密的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># vncviewer -via zhumingyu@eternalcenter.com localhost :1</code></pre>
+
+
+
+<p>（补充：这里以使用 eternalcenter.com 服务器上的 zhumingyu 用户访问编号为 1 的 VNC 服务为例）</p>
+
+
+
+<h4>内容二：通过非标准端口的 SSH 对 VNC 进行加密<br>2.1 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh -p &lt;SSH non standard port number> -L &lt;Port number of VNC service>:localhost:&lt;Port number of VNC service> -l  &lt;SSH user of VNC server> &lt;IP address of VNC server></code></pre>
+
+
+
+<p>另开启一个命令行终端：</p>
+
+
+
+<pre class="wp-block-code"><code># vncviewer localhost :&lt;VNC service number></code></pre>
+
+
+
+<h4>2.2 通过 SSH 对 VNC 进行加密，同时使用 SSH 隧道的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh -p 1000 -L 5901:localhost:5901 -l zhumingyu eternalcenter.com</code></pre>
+
+
+
+<p>另开启一个命令行终端：</p>
+
+
+
+<pre class="wp-block-code"><code># vncviewer localhost :1</code></pre>
+
+
+
+<p>（补充：这里以使用 eternalcenter.com 服务器上的 zhumingyu 用户通过 1000 端口号 的 SSH 访问编号为 1 的 VNC 服务为例）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux SELinux 标签的设置</title>
+		<link>https://eternalcenter-2022-02.github.io/selinux-label/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 25 Jul 2020 07:11:03 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[SELinux]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File Security (系统文件安全)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=10257</guid>
+
+					<description><![CDATA[内容目录： 内容一：开启 SELinux 标签1.1 修改 SELinux 配置文件1.2 重启系统 内容二：SELinux 的常见特性2.1 SELinux 特性一：创建的文件或目录会自动继承其父目录的 SELinux 标签2.1.1 在 /var/www/html/ 目录下新创建 index.html 文件2.1.2 显示 /var/www/html/ 目录的 SELinux 标签2.1.3 显示新生成的 /var/www/html/index.html 标签2.2 SELinux 特性二：移动文件或目录和保留属性复制文件或目录不会改变其 SELinux 标签，普通复制会改变 SELinux 标签2.2.1 在 /tmp/ 目录下新创建 file1，file2，file3 文件2.2.2 显示 ls -Zd /tmp/ 目录的 SELinux 标签2.2.3 显示新创建文件的标签2.2.4 将 /tmp/file1 复制到 /var/www/html/2.2.5 将 /tmp/file2 移动到 /var/www/html/2.2.6 将 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/selinux-label/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux SELinux 标签的设置"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-开启-selinux-标签1-1-修改-selinux-配置文件1-2-重启系统">内容一：开启 SELinux 标签<br>1.1 修改 SELinux 配置文件<br>1.2 重启系统</h4>
+
+
+
+<h4 id="内容二-selinux-的常见特性2-1-selinux-特性一-创建的文件或目录会自动继承其父目录的-selinux-标签2-1-1-在-var-www-html-目录下新创建-index-html-文件2-1-2-显示-var-www-html-目录的-selinux-标签2-1-3-显示新生成的-var-www-html-index-html-标签2-2-selinux-特性二-移动文件或目录和保留属性复制文件或目录不会改变其-selinux-标签-普通复制会改变-selinux-标签2-2-1-在-tmp-目录下新创建-file1-file2-file3-文件2-2-2-显示-ls-zd-tmp-目录的-selinux-标签2-2-3-显示新创建文件的标签2-2-4-将-tmp-file1-复制到-var-www-html-2-2-5-将-tmp-file2-移动到-var-www-html-2-2-6-将-tmp-file2-复制到-var-www-html-并使用-a-选项保留文件属性2-2-7-显示这些文件的-selinux-标签">内容二：SELinux 的常见特性<br>2.1 SELinux 特性一：创建的文件或目录会自动继承其父目录的 SELinux 标签<br>2.1.1 在 /var/www/html/ 目录下新创建 index.html 文件<br>2.1.2 显示 /var/www/html/ 目录的 SELinux 标签<br>2.1.3 显示新生成的 /var/www/html/index.html 标签<br>2.2 SELinux 特性二：移动文件或目录和保留属性复制文件或目录不会改变其 SELinux 标签，普通复制会改变 SELinux 标签<br>2.2.1 在 /tmp/ 目录下新创建 file1，file2，file3 文件<br>2.2.2 显示 ls -Zd /tmp/ 目录的 SELinux 标签<br>2.2.3 显示新创建文件的标签<br>2.2.4 将 /tmp/file1 复制到 /var/www/html/<br>2.2.5 将 /tmp/file2 移动到 /var/www/html/<br>2.2.6 将 /tmp/file2 复制到 /var/www/html/，并使用 -a 选项保留文件属性<br>2.2.7 显示这些文件的 SELinux 标签</h4>
+
+
+
+<h4 id="内容三-显示某个文件或目录-selinux-标签3-1-显示某个文件-selinux-标签3-2-显示某个目录-selinux-标签3-3-显示某个进程-selinux-标签">内容三：显示某个文件或目录 SELinux 标签<br>3.1 显示某个文件 SELinux 标签<br>3.2 显示某个目录 SELinux 标签<br>3.3 显示某个进程 SELinux 标签</h4>
+
+
+
+<h4 id="内容四-显示所有-selinux-标签4-1-显示所有文件和目录的-selinux-标签4-2-显示所有端口的-selinux-标签4-3-显示所有进程的-selinux-标签">内容四：显示所有 SELinux 标签<br>4.1 显示所有文件和目录的 SELinux 标签<br>4.2 显示所有端口的 SELinux 标签<br>4.3 显示所有进程的 SELinux 标签</h4>
+
+
+
+<h4 id="内容五-设置-selinux-标签5-1-设置文件和目录-selinux-标签5-1-1-使用-semanage-fcontext-命令和-restorecon-命令设置文件和目录的-selinux-标签5-1-1-1-semanage-fcontext-命令的常用选项5-1-1-2-使用-semanage-fcontext-命令和-restorecon-命令设置文件和目录的-selinux-标签5-1-1-2-1-使用-smanage-fcontext-命令设置-selinux-标签5-1-1-2-2-使用-restorecon-命令修改默认上下文5-1-2-使用-chcon-命令设置-selinux-标签5-2-设置端口-selinux">内容五：设置 SELinux 标签<br>5.1 设置文件和目录 SELinux 标签<br>5.1.1 使用 semanage fcontext 命令和 restorecon 命令设置文件和目录的 SELinux 标签<br>5.1.1.1 semanage fcontext 命令的常用选项<br>5.1.1.2 使用 semanage fcontext 命令和 restorecon 命令设置文件和目录的 SELinux 标签<br>5.1.1.2.1 使用 smanage fcontext 命令设置 SELinux 标签<br>5.1.1.2.2 使用 restorecon 命令修改默认上下文<br>5.1.2 使用 chcon 命令设置 SELinux 标签<br>5.2 设置端口 SELinux</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-开启-selinux-标签1-1-修改-selinux-配置文件">内容一：开启 SELinux 标签<br>1.1 修改 SELinux 配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=disabled
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=enforcing
+......</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=perssive
+......</code></pre>
+
+
+
+<h4 id="1-2-重启系统">1.2 重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4 id="内容二-selinux-的常见特性2-1-selinux-特性一-创建的文件或目录会自动继承其父目录的-selinux-标签2-1-1-在-var-www-html-目录下新创建-index-html-文件">内容二：SELinux 的常见特性<br>2.1 SELinux 特性一：创建的文件或目录会自动继承其父目录的 SELinux 标签<br>2.1.1 在 /var/www/html/ 目录下新创建 index.html 文件</h4>
+
+
+
+<pre class="wp-block-code"><code># echo website &gt; /var/www/html/index.html</code></pre>
+
+
+
+<p>（补充：这里以在 /var/www/html/ 目录下生成 index.html 文件为例）</p>
+
+
+
+<h4 id="2-1-2-显示-var-www-html-目录的-selinux-标签">2.1.2 显示 /var/www/html/ 目录的 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -dZ /var/www/html/
+unconfined_u:object_r:httpd_sys_content_t:s0 index.html</code></pre>
+
+
+
+<h4 id="2-1-3-显示新生成的-var-www-html-index-html-标签">2.1.3 显示新生成的 /var/www/html/index.html 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Z /var/www/html/index.html/index.html 
+unconfined_u:object_r:httpd_sys_content_t:s0 index.html</code></pre>
+
+
+
+<p>（补充：从内容 1.1.2 和内容 1.1.3 命令的结果可以看出新生成的文件或其父目录的 SELinux 标签一致）</p>
+
+
+
+<h4 id="2-2-selinux-特性二-移动文件或目录和保留属性复制文件或目录不会改变其-selinux-标签-普通复制会改变-selinux-标签2-2-1-在-tmp-目录下新创建-file1-file2-file3-文件">2.2 SELinux 特性二：移动文件或目录和保留属性复制文件或目录不会改变其 SELinux 标签，普通复制会改变 SELinux 标签<br>2.2.1 在 /tmp/ 目录下新创建 file1，file2，file3 文件</h4>
+
+
+
+<pre class="wp-block-code"><code># touch /tmp/file{1,2,3}</code></pre>
+
+
+
+<h4 id="2-2-2-显示-ls-zd-tmp-目录的-selinux-标签">2.2.2 显示 ls -Zd /tmp/ 目录的 selinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Zd /tmp/
+unconfined_u:object_r:user_tmp_t:s0 /tmp/</code></pre>
+
+
+
+<h4 id="2-2-3-显示新创建文件的标签">2.2.3 显示新创建文件的标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Z /tmp/file*
+unconfined_u:object_r:user_tmp_t:s0 /tmp/file1  unconfined_u:object_r:user_tmp_t:s0 /tmp/file2
+unconfined_u:object_r:user_tmp_t:s0 /tmp/file3</code></pre>
+
+
+
+<h4 id="2-2-4-将-tmp-file1-复制到-var-www-html">2.2.4 将 /tmp/file1 复制到 /var/www/html/</h4>
+
+
+
+<pre class="wp-block-code"><code># cp /tmp/file1 /var/www/html/</code></pre>
+
+
+
+<h4 id="2-2-5-将-tmp-file2-移动到-var-www-html">2.2.5 将 /tmp/file2 移动到 /var/www/html/</h4>
+
+
+
+<pre class="wp-block-code"><code># mv /tmp/file2 /var/www/html/</code></pre>
+
+
+
+<h4 id="2-2-6-将-tmp-file2-复制到-var-www-html-并使用-a-选项保留文件属性">2.2.6 将 /tmp/file2 复制到 /var/www/html/，并使用 -a 选项保留文件属性</h4>
+
+
+
+<pre class="wp-block-code"><code># cp -a /tmp/file3 /var/www/html/</code></pre>
+
+
+
+<h4 id="2-2-7-显示这些文件的-selinux-标签">2.2.7 显示这些文件的 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Z /var/www/html/file*
+unconfined_u:object_r:httpd_sys_content_t:s0 file1           unconfined_u:object_r:user_tmp_t:s0 file3
+unconfined_u:object_r:user_tmp_t:s0 file2</code></pre>
+
+
+
+<p>（补充：从内容 2.2.3 和内容 2.2.7 命令的结果可以看出只有普通复制会改变 SELinux 标签 ）</p>
+
+
+
+<h4 id="内容三-显示某个文件-目录或进程-selinux-标签3-1-显示某个文件-selinux-标签">内容三：显示某个文件、目录或进程 SELinux 标签<br>3.1 显示某个文件 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Z &lt;file&gt;</code></pre>
+
+
+
+<h4 id="3-2-显示某个目录-selinux-标签">3.2 显示某个目录 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ls -Zd &lt;directory&gt;</code></pre>
+
+
+
+<h4 id="3-3-显示某个进程-selinux-标签">3.3 显示某个进程 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ps -auxZ | grep &lt;process&gt;</code></pre>
+
+
+
+<h4 id="内容四-显示所有-selinux-标签4-1-显示所有文件和目录的-selinux-标签">内容四：显示所有 SELinux 标签<br>4.1 显示所有文件和目录的 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># semanage fcontext -l</code></pre>
+
+
+
+<p>（注意：需要单独安装 policycoreutils-python-utils 后才能使用 semanage 命令）</p>
+
+
+
+<h4 id="4-2-显示所有端口的-selinux-标签">4.2 显示所有端口的 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># semanage port -l</code></pre>
+
+
+
+<p>（注意：需要单独安装 policycoreutils-python-utils 后才能使用 semanage 命令）</p>
+
+
+
+<h4 id="4-3-显示所有进程的-selinux-标签">4.3 显示所有进程的 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># ps -auxZ</code></pre>
+
+
+
+<h4 id="内容五-设置-selinux-标签5-1-设置文件和目录-selinux-标签5-1-1-使用-semanage-fcontext-命令和-restorecon-命令设置文件和目录的-selinux-标签5-1-1-1-semanage-fcontext-命令的常用选项">内容五：设置 SELinux 标签<br>5.1 设置文件和目录 SELinux 标签<br>5.1.1 使用 semanage fcontext 命令和 restorecon 命令设置文件和目录的 SELinux 标签<br>5.1.1.1 semanage fcontext 命令的常用选项</h4>
+
+
+
+<p>1) -a 添加或变更 SELinux 标签<br>2) -d 删除 SELinux 标签<br>3) -l 显示所有的 SELinux 标签<br>4) -t 指定上下文 SELinux 标签<br>5) -v 显示修改 SELinux 标签的内容<br>6) -R 递归设置 SELinux 标签<br>7) -m 变更 SELinux 标签</p>
+
+
+
+<h4 id="5-1-1-2-使用-semanage-fcontext-命令和-restorecon-命令设置文件和目录的-selinux-标签5-1-1-2-1-使用-smanage-fcontext-命令设置-selinux-标签">5.1.1.2 使用 semanage fcontext 命令和 restorecon 命令设置文件和目录的 SELinux 标签<br>5.1.1.2.1 使用 smanage fcontext 命令设置 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># semanage fcontext -a -t httpd_sys_content_t "/tmp(/.*)?"</code></pre>
+
+
+
+<p>（补充：这里以将 /tmp(/.*) 的 SELinux 标签设置为 httpd_sys_content_t 为例）</p>
+
+
+
+<p>（注意：需要单独安装 policycoreutils-python-utils 后才能使用 semanage 命令）</p>
+
+
+
+<h4 id="5-1-1-2-2-使用-restorecon-命令修改默认上下文">5.1.1.2.2 使用 restorecon 命令修改默认上下文</h4>
+
+
+
+<pre class="wp-block-code"><code># restorecon -Rv /tmp
+Relabeled /tmp from unconfined_u:object_r:default_t:s0 to unconfined_u:object_r:httpd_sys_content_t:s0</code></pre>
+
+
+
+<h4 id="5-1-2-使用-chcon-命令设置-selinux-标签">5.1.2 使用 chcon 命令设置 SELinux 标签</h4>
+
+
+
+<pre class="wp-block-code"><code># chcon -t httpd_sys_content_t /tmp/*</code></pre>
+
+
+
+<p>（补充：这里以将 /tmp/* 的 SELinux 标签设置为 httpd_sys_content_t 为例）</p>
+
+
+
+<h4 id="5-2-设置端口-selinux">5.2 设置端口 SELinux</h4>
+
+
+
+<pre class="wp-block-code"><code># semanage port -a -t http_port_t -p tcp 82</code></pre>
+
+
+
+<p>（补充：这里以将 TCP 82 端口的 SELinux 标签设置为 http_port_t 为例）</p>
+
+
+
+<p>（注意：需要单独安装 policycoreutils-python-utils 后才能使用 semanage 命令）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Postfix 数据的加密 （通过 TLS 实现）</title>
+		<link>https://eternalcenter-2022-02.github.io/postfix-tls/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 22 Jul 2020 02:56:38 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Mail]]></category>
+		<category><![CDATA[Other Services (其他服务)]]></category>
+		<category><![CDATA[Services (服务)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=10215</guid>
+
+					<description><![CDATA[内容一：Postfix 不使用 TLS 加密数据传输的后果 1) 收发的邮件数据会被他人截取2) 给 Gmail 等电子邮箱发送邮件时，会提示类似 “ *** 未对此邮件进行加密” 的信息 内容二：给 Postfix 设置 TLS 加密数据传输的方法2.1 给 Postfix 的配置文件设置 TLS 机密数据传输的参数 添加以下内容： （补充：smtpd_tls_security_level 代表接收邮件的 TLS 安全等级smtp_tls_security_level 代表发送邮件的 TLS 安全等级TLS 的常用安全等级有 none、may 和 encrypt ：1) none 表示禁止使用 TLS 加密2) may 表示可以接收不使用 TLS 加密的邮件，但是会提出支持 TLS 加密的通告。发送邮件时优先发送支持 TLS 加密的邮件3) encrypt 表示强制使用 TLS 加密） 2.2 重启 Postfix &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/postfix-tls/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Postfix 数据的加密 （通过 TLS 实现）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h4>内容一：Postfix 不使用 TLS 加密数据传输的后果</h4>
+
+
+
+<p>1) 收发的邮件数据会被他人截取<br>2) 给 Gmail 等电子邮箱发送邮件时，会提示类似 “ *** 未对此邮件进行加密” 的信息</p>
+
+
+
+<h4>内容二：给 Postfix 设置 TLS 加密数据传输的方法<br>2.1 给 Postfix 的配置文件设置 TLS 机密数据传输的参数</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/postfix/main.cf</code></pre>
+
+
+
+<p>添加以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+smtpd_tls_security_level = may
+smtp_tls_security_level = may
+......</code></pre>
+
+
+
+<p>（<br>补充：<br>smtpd_tls_security_level 代表接收邮件的 TLS 安全等级<br>smtp_tls_security_level 代表发送邮件的 TLS 安全等级<br>TLS 的常用安全等级有 none、may 和 encrypt ：<br>1) none 表示禁止使用 TLS 加密<br>2) may 表示可以接收不使用 TLS 加密的邮件，但是会提出支持 TLS 加密的通告。发送邮件时优先发送支持 TLS 加密的邮件<br>3) encrypt 表示强制使用 TLS 加密<br>）</p>
+
+
+
+<h4>2.2 重启 Postfix 服务</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl restart postfix</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux SELinux 布尔 （boolean） 值的设置</title>
+		<link>https://eternalcenter-2022-02.github.io/selinux-boolean/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Thu, 16 Jul 2020 11:56:09 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[SELinux]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System File Security (系统文件安全)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=10063</guid>
+
+					<description><![CDATA[内容目录： 内容一：开启 SELinux 布尔（boolean）值1.1 显示当前 SELinux 状态1.2 将 SELinux 的状态设置为 Enforcing 以开启布尔（boolean）值1.2.1 当当前 SELinux 的状态为 Disabled 时开启布尔（boolean）值的方法1.2.1.1 修改 SELinux 配置文件1.2.1.2 重启系统1.2.2 当当前 SELinux 的状态为 Perssive 时开启布尔（boolean）值的方法 内容二：显示所有 SELinux 布尔（boolean）值 内容三：布尔（boolean）值的管理3.1 允许某一个 SELinux 布尔（boolean）值开启3.1.1 临时允许某一个 SELinux 布尔（boolean）值开启3.1.1.1 临时允许某一个 SELinux 布尔（boolean）值开启的格式3.1.1.2 临时允许某一个 SELinux 布尔（boolean）值开启的案例3.1.2 永久允许某一个 SELinux 布尔（boolean）值开启3.1.2.1 永久允许某一个 SELinux 布尔（boolean）值开启的格式3.1.2.2 永久允许某一个 SELinux 布尔（boolean）值开启的案例3.2 取消某一个 SELinux 布尔（boolean）值开启3.2.1 临时取消某一个 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/selinux-boolean/" class="more-link">Continue reading<span class="screen-reader-text"> "[内容] Linux SELinux 布尔 （boolean） 值的设置"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-开启-selinux-布尔-boolean-值1-1-显示当前-selinux-状态1-2-将-selinux-的状态设置为-enforcing-以开启布尔-boolean-值1-2-1-当当前-selinux-的状态为-disabled-时开启布尔-boolean-值的方法1-2-1-1-修改-selinux-配置文件1-2-1-2-重启系统1-2-2-当当前-selinux-的状态为-perssive-时开启布尔-boolean-值的方法">内容一：开启 SELinux 布尔（boolean）值<br>1.1 显示当前 SELinux 状态<br>1.2 将 SELinux 的状态设置为 Enforcing 以开启布尔（boolean）值<br>1.2.1 当当前 SELinux 的状态为 Disabled 时开启布尔（boolean）值的方法<br>1.2.1.1 修改 SELinux 配置文件<br>1.2.1.2 重启系统<br>1.2.2 当当前 SELinux 的状态为 Perssive 时开启布尔（boolean）值的方法</h4>
+
+
+
+<h4 id="内容二-查看所有-selinux-布尔-boolean-值">内容二：显示所有 SELinux 布尔（boolean）值</h4>
+
+
+
+<h4 id="内容三-布尔-boolean-值的管理3-1-允许某一个-selinux-布尔-boolean-值开启3-1-1-临时允许某一个-selinux-布尔-boolean-值开启3-1-1-1-临时允许某一个-selinux-布尔-boolean-值开启的格式3-1-1-2-临时允许某一个-selinux-布尔-boolean-值开启的案例3-1-2-永久允许某一个-selinux-布尔-boolean-值开启3-1-2-1-永久允许某一个-selinux-布尔-boolean-值开启的格式3-1-2-2-永久允许某一个-selinux-布尔-boolean-值开启的案例3-2-取消某一个-selinux-布尔-boolean-值开启3-2-1-临时取消某一个-selinux-布尔-boolean-值开启3-2-1-1-临时取消某一个-selinux-布尔-boolean-值开启的格式3-2-1-2-临时取消某一个-selinux-布尔-boolean-值开启的案例3-2-2-永久取消某一个-selinux-布尔-boolean-值关闭3-2-2-1-永久取消某一个-selinux-布尔-boolean-值开启的格式3-2-2-2-永久取消某一个-selinux-布尔-boolean-值开启的案例">内容三：布尔（boolean）值的管理<br>3.1 允许某一个 SELinux 布尔（boolean）值开启<br>3.1.1 临时允许某一个 SELinux 布尔（boolean）值开启<br>3.1.1.1 临时允许某一个 SELinux 布尔（boolean）值开启的格式<br>3.1.1.2 临时允许某一个 SELinux 布尔（boolean）值开启的案例<br>3.1.2 永久允许某一个 SELinux 布尔（boolean）值开启<br>3.1.2.1 永久允许某一个 SELinux 布尔（boolean）值开启的格式<br>3.1.2.2 永久允许某一个 SELinux 布尔（boolean）值开启的案例<br>3.2 取消某一个 SELinux 布尔（boolean）值开启<br>3.2.1 临时取消某一个 SELinux 布尔（boolean）值开启<br>3.2.1.1 临时取消某一个 SELinux 布尔（boolean）值开启的格式<br>3.2.1.2 临时取消某一个 SELinux 布尔（boolean）值开启的案例<br>3.2.2 永久取消某一个 SELinux 布尔（boolean）值关闭<br>3.2.2.1 永久取消某一个 SELinux 布尔（boolean）值开启的格式<br>3.2.2.2 永久取消某一个 SELinux 布尔（boolean）值开启的案例</h4>
+
+
+
+<h2 id="具体的操作步骤">具体的操作步骤：</h2>
+
+
+
+<h4 id="内容一-开启-selinux-布尔-boolean-值1-1-显示当前-selinux-状态">内容一：开启 SELinux 布尔（boolean）值<br>1.1 显示当前 SELinux 状态</h4>
+
+
+
+<pre class="wp-block-code"><code># getenforce</code></pre>
+
+
+
+<h4 id="1-2-将-selinux-的状态设置为-enforcing-以开启布尔-boolean-值1-2-1-当当前-selinux-的状态为-disabled-时开启布尔-boolean-值的方法1-2-1-1-修改-selinux-配置文件">1.2 将 SELinux 的状态设置为 Enforcing 以开启布尔（boolean）值<br>1.2.1 当当前 SELinux 的状态为 Disabled 时开启布尔（boolean）值的方法<br>1.2.1.1 修改 SELinux 配置文件</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/selinux/config</code></pre>
+
+
+
+<p>将以下内容：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=disabled
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+SELINUX=enforcing
+......</code></pre>
+
+
+
+<h4 id="1-2-1-2-重启系统">1.2.1.2 重启系统</h4>
+
+
+
+<pre class="wp-block-code"><code># reboot</code></pre>
+
+
+
+<h4 id="1-2-2-当当前-selinux-的状态为-perssive-时开启布尔-boolean-值的方法">1.2.2 当当前 SELinux 的状态为 Perssive 时开启布尔（boolean）值的方法</h4>
+
+
+
+<pre class="wp-block-code"><code># setenfoce 1</code></pre>
+
+
+
+<p>（补充：系统重启后失效）</p>
+
+
+
+<h4 id="内容二-查看所有-selinux-布尔-boolean-值">内容二：显示所有 SELinux 布尔（boolean）值</h4>
+
+
+
+<pre class="wp-block-code"><code># semanage boolean -l</code></pre>
+
+
+
+<h4 id="内容三-布尔-boolean-值的管理3-1-允许某一个-selinux-布尔-boolean-值开启3-1-1-临时允许某一个-selinux-布尔-boolean-值开启3-1-1-1-临时允许某一个-selinux-布尔-boolean-值开启的格式">内容三：布尔（boolean）值的管理<br>3.1 允许某一个 SELinux 布尔（boolean）值开启<br>3.1.1 临时允许某一个 SELinux 布尔（boolean）值开启<br>3.1.1.1 临时允许某一个 SELinux 布尔（boolean）值开启的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool &lt;boolean value&gt; 1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool &lt;boolean value&gt; on</code></pre>
+
+
+
+<h4 id="3-1-1-2-临时允许某一个-selinux-布尔-boolean-值开启的案例">3.1.1.2 临时允许某一个 SELinux 布尔（boolean）值开启的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool httpd_can_network_connect 1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool httpd_can_network_connect on</code></pre>
+
+
+
+<h4 id="3-1-2-永久允许某一个-selinux-布尔-boolean-值开启3-1-2-1-永久允许某一个-selinux-布尔-boolean-值开启的格式">3.1.2 永久允许某一个 SELinux 布尔（boolean）值开启<br>3.1.2.1 永久允许某一个 SELinux 布尔（boolean）值开启的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P &lt;boolean value&gt; 1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P &lt;boolean value&gt; on</code></pre>
+
+
+
+<h4 id="3-1-2-2-永久允许某一个-selinux-布尔-boolean-值开启的案例">3.1.2.2 永久允许某一个 SELinux 布尔（boolean）值开启的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P httpd_can_network_connect 1</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P httpd_can_network_connect on</code></pre>
+
+
+
+<h4 id="3-2-取消某一个-selinux-布尔-boolean-值开启3-2-1-临时取消某一个-selinux-布尔-boolean-值开启3-2-1-1-临时取消某一个-selinux-布尔-boolean-值开启的格式">3.2 取消某一个 SELinux 布尔（boolean）值开启<br>3.2.1 临时取消某一个 SELinux 布尔（boolean）值开启<br>3.2.1.1 临时取消某一个 SELinux 布尔（boolean）值开启的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool &lt;boolean value&gt; 0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool &lt;boolean value&gt; off</code></pre>
+
+
+
+<h4 id="3-2-1-2-临时取消某一个-selinux-布尔-boolean-值开启的案例">3.2.1.2 临时取消某一个 SELinux 布尔（boolean）值开启的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool httpd_can_network_connect 0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool httpd_can_network_connect off</code></pre>
+
+
+
+<h4 id="3-2-2-永久取消某一个-selinux-布尔-boolean-值关闭3-2-2-1-永久取消某一个-selinux-布尔-boolean-值开启的格式">3.2.2 永久取消某一个 SELinux 布尔（boolean）值关闭<br>3.2.2.1 永久取消某一个 SELinux 布尔（boolean）值开启的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P &lt;boolean value&gt; 0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P &lt;boolean value&gt; off</code></pre>
+
+
+
+<h4 id="3-2-2-2-永久取消某一个-selinux-布尔-boolean-值开启的案例">3.2.2.2 永久取消某一个 SELinux 布尔（boolean）值开启的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P httpd_can_network_connect 0</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># setsebool -P httpd_can_network_connect off</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 只对某一个 IP 地址开放 TCP 22 端口 （iptables 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-iptables-22-port-add/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2020 02:29:00 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9996</guid>
+
+					<description><![CDATA[介绍： 名称：只对某一个 IP 地址开放 TCP 22 端口作用：只对某一个 IP 地址开放 TCP 22 端口 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本分割线里的变量：ipaddress=192.168.1.1 #要开放 TCP 22 端口的 IP 地址 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>名称：只对某一个 IP 地址开放 TCP 22 端口<br>作用：只对某一个 IP 地址开放 TCP 22 端口</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<p>脚本分割线里的变量：<br>ipaddress=192.168.1.1 #要开放 TCP 22 端口的 IP 地址</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+ipaddress=192.168.1.1
+####################### Separator ########################
+
+systemctl stop firewalld
+systemctl disable firewalld
+
+yum -y install iptables-services
+zypper -n install iptables
+
+systemctl enable iptables
+systemctl start iptables
+
+sysctl -w net.ipv4.ip_forward=1
+iptables -t filter -F
+iptables -t nat -F
+
+iptables -P OUTPUT ACCEPT
+#iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT
+
+iptables -t filter -A INPUT -j ACCEPT -s $ipaddress -p tcp --destination-port 22
+iptables -t filter -A INPUT -j DROP -p tcp --destination-port 22
+
+service iptables save
+systemctl restart iptables</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 取消所有已开放的端口策略 （firewalld 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-firewalld-all-number-ports-remove/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Jun 2020 08:49:55 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9954</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：取消所有已开放的端口策略作用：取消所有已开放的端口策略 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：取消所有已开放的端口策略<br>作用：取消所有已开放的端口策略</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+systemctl start firewalld
+systemctl enable firewalld
+
+for i in `firewall-cmd --list-all | grep ports | egrep &#91;0-9] | awk -F':' '{print $2}'`
+do
+        pports=`echo $i | awk -F'/' '{print $1}'`
+        ptus=`echo $i | awk -F'/' '{print $2}'`
+
+        firewall-cmd --remove-port=$pports/$ptus --permanent
+
+done
+
+firewall-cmd --add-service=ssh --permanent
+firewall-cmd --reload</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 取消所有已设置的复杂端口策略 （firewalld 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-firewalld-all-number-ports-rich-rules-remove/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Jun 2020 08:30:51 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[Shell Website (网站)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9941</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：取消所有已设置的复杂端口策略作用：取消所有已设置的复杂端口策略 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：取消所有已设置的复杂端口策略<br>作用：取消所有已设置的复杂端口策略</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+systemctl start firewalld
+systemctl enable firewalld
+
+max=`firewall-cmd --list-all | grep "rule family" | wc -l`
+
+for i in `seq 1 $max`
+do
+        echo $i
+        lines=`firewall-cmd --list-all | grep "rule family" | sed -n $&#91;i]p`
+        ipvs=`echo $lines | awk -F'"' '{print $2}'`
+        ips=`echo $lines | awk -F'"' '{print $4}'`
+        ports=`echo $lines | awk -F'"' '{print $6}'`
+        tus=`echo $lines | awk -F'"' '{print $8}'`
+        acts=`echo $lines | awk -F'"' '{print $9}'`
+
+        echo $ipvs $ips $ports $tus $acts
+        firewall-cmd --remove-rich-rule="rule family="$ipvs" source address="$ips" port protocol="$tus" port="$ports" $acts" --permanent
+done
+
+firewall-cmd --add-service=ssh --permanent
+firewall-cmd --reload</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 开放所有正处于监听状态的端口策略 （firewalld 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-firewalld-listening-number-ports-add/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Jun 2020 08:24:03 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9939</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：开放所有正处于监听状态的端口策略作用：开放所有正处于监听状态的端口策略 使用方法：1. 给此脚本添加执行权限2. 执行此脚本 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：开放所有正处于监听状态的端口策略<br>作用：开放所有正处于监听状态的端口策略</p>
+
+
+
+<p>使用方法：<br>1. 给此脚本添加执行权限<br>2. 执行此脚本</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+systemctl start firewalld
+systemctl enable firewalld
+
+for k in `ss -ntulap |grep 0.0.0.0 | grep LISTEN | awk '{print $5}' | awk -F':' '{print $2}'`
+do 
+        firewall-cmd --add-port=$k/tcp --permanent
+done
+
+firewall-cmd --reload</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[工具] Shell 批量对多个 IP 地址开发多个端口策略 （firewalld 版）</title>
+		<link>https://eternalcenter-2022-02.github.io/shell-firewalld-number-ports-rich-rules-add/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Fri, 26 Jun 2020 08:20:19 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[Languages (语言)]]></category>
+		<category><![CDATA[Shell]]></category>
+		<category><![CDATA[Shell Deployment (部署)]]></category>
+		<category><![CDATA[Shell Network (网络)]]></category>
+		<category><![CDATA[Shell Tool (工具)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9937</guid>
+
+					<description><![CDATA[介绍： 作者：朱明宇名称：批量对多个 IP 地址开发多个端口策略作用：批量对多个 IP 地址开发多个端口策略 使用方法：1. 在此脚本的分割线内写入相应的内容2. 给此脚本添加执行权限3. 执行此脚本 脚本分割线里的变量：1.ips=&#8221;192.168.2.1 192.168.1.0/24&#8243; #要开放端口的 IP 地址2.ports&#8221;22 3306 8080-8090&#8243; #要开放的端口 脚本：]]></description>
+										<content:encoded><![CDATA[
+<h2>介绍：</h2>
+
+
+
+<p>作者：朱明宇<br>名称：批量对多个 IP 地址开发多个端口策略<br>作用：批量对多个 IP 地址开发多个端口策略</p>
+
+
+
+<p>使用方法：<br>1. 在此脚本的分割线内写入相应的内容<br>2. 给此脚本添加执行权限<br>3. 执行此脚本</p>
+
+
+
+<p>脚本分割线里的变量：<br>1.ips=&#8221;192.168.2.1 192.168.1.0/24&#8243; #要开放端口的 IP 地址<br>2.ports&#8221;22 3306 8080-8090&#8243; #要开放的端口</p>
+
+
+
+<h2>脚本：</h2>
+
+
+
+<pre class="wp-block-code"><code>#!/bin/bash
+
+####################### Separator ########################
+
+ips="192.168.2.1 192.168.1.0/24"
+ports"22 3306 8080-8090"
+
+####################### Separator ########################
+
+systemctl start firewalld
+systemctl enable firewalld
+
+for i in $ips
+do
+        for j in $ports
+        do
+                firewall-cmd --add-rich-rule="rule family="ipv4" source address="$i" port protocol="tcp" port="$j" accept" --permanent
+        done
+        echo $i done
+        echo
+done
+
+firewall-cmd --reload</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] CentOS Linux &#038; RHEL 网页图形化管理工具 cockpit</title>
+		<link>https://eternalcenter-2022-02.github.io/cockpit/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 06 Jun 2020 09:07:39 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System General Log (系统普通日志)]]></category>
+		<category><![CDATA[System Log (系统日志)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Operation (系统操作)]]></category>
+		<category><![CDATA[System Operation & System Setting & System Software (系统操作 & 系统设置 & 系统软件)]]></category>
+		<category><![CDATA[System Performance (系统性能)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Process (系统进程)]]></category>
+		<category><![CDATA[System Process & System Performance (系统进程 & 系统性能)]]></category>
+		<category><![CDATA[System Process Security (系统进程安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<category><![CDATA[System Security Log (系统安全日志)]]></category>
+		<category><![CDATA[System Setting (系统设置)]]></category>
+		<category><![CDATA[System Software (系统软件)]]></category>
+		<category><![CDATA[System Statistic Log (系统统计日志)]]></category>
+		<category><![CDATA[System User (系统用户)]]></category>
+		<category><![CDATA[System User & System Privilege (系统用户 & 系统权限)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9718</guid>
+
+					<description><![CDATA[步骤一：系统环境要求 服务器系统配置好可用的软件源 步骤二：安装 cockpit （补充：cockpit 是管理单台主机的程序，cockpit-dashaboard 是管理多台主机的程序） 步骤三：启动 cockpit 步骤四：登录 cockpit 使用浏览器登录：https://&/#60;服务器的 IP 地址&#62;:9090]]></description>
+										<content:encoded><![CDATA[
+<h4>步骤一：系统环境要求</h4>
+
+
+
+<p>服务器系统配置好可用的软件源</p>
+
+
+
+<h4>步骤二：安装 cockpit</h4>
+
+
+
+<pre class="wp-block-code"><code># yum -y install cockpit cockpit-dashaboard</code></pre>
+
+
+
+<p>（补充：cockpit 是管理单台主机的程序，cockpit-dashaboard 是管理多台主机的程序）</p>
+
+
+
+<h4>步骤三：启动 cockpit</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl start cockpit</code></pre>
+
+
+
+<h4>步骤四：登录 cockpit</h4>
+
+
+
+<p>使用浏览器登录：https://&lt;服务器的/ IP 地址&gt;:9090</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[内容] Linux 所支持的协议和端口对应的关系</title>
+		<link>https://eternalcenter-2022-02.github.io/ports/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 06 Jun 2020 05:13:10 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=9689</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<pre class="wp-block-code"><code># cat /etc/services</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[步骤] Linux 登陆安全的实现 （通过复杂 SSH 公私密钥实现）</title>
+		<link>https://eternalcenter-2022-02.github.io/ssh-security/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 09 May 2020 06:47:56 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Login Security (系统登录安全)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=8966</guid>
+
+					<description><![CDATA[步骤目录： 步骤一：生成复杂的 SSH 密钥步骤二：将生成的复杂 SSH 密钥移动到指定位置步骤三：给部署好的复杂 SSH 密钥设置权限步骤四：将复杂的 SSH 公钥拷贝到目标服务器步骤五：指定复杂 SSH 密钥登陆目标服务器步骤六：在目标服务器上设置只能使用密钥登陆 补充：补充一：修改复杂 SSH 密钥密码的方法补充二：显示已生成的 SSH 密钥的加密方式 具体的步骤： 步骤一：生成复杂的 SSH 密钥 （注意：在生成复杂 SSH 密钥的时候最好也设置它的使用密码） 步骤二：将生成的复杂 SSH 密钥移动到指定位置 步骤三：给部署好的复杂 SSH 密钥设置权限 步骤四：将复杂的 SSH 公钥拷贝到目标服务器 步骤五：指定复杂 SSH 密钥登陆目标服务器 步骤六：在目标服务器上设置只能使用密钥登陆 将其中的： 修改为： 补充： 补充一：修改复杂 SSH 密钥密码的方法 （补充：无密码的 SSH 密钥也能通过此方法设置密码） 补充二：显示已生成的 SSH 密钥的加密方式]]></description>
+										<content:encoded><![CDATA[
+<h2 id="步骤目录">步骤目录：</h2>
+
+
+
+<h4 id="步骤一-生成复杂的-ssh-密钥步骤二-将生成的复杂-ssh-密钥移动到指定位置步骤三-给部署好的复杂-ssh-密钥设置权限步骤四-将复杂的-ssh-公钥拷贝到目标服务器步骤五-指定复杂-ssh-密钥登陆目标服务器步骤六-在目标服务器上设置只能使用密钥登陆">步骤一：生成复杂的 SSH 密钥<br>步骤二：将生成的复杂 SSH 密钥移动到指定位置<br>步骤三：给部署好的复杂 SSH 密钥设置权限<br>步骤四：将复杂的 SSH 公钥拷贝到目标服务器<br>步骤五：指定复杂 SSH 密钥登陆目标服务器<br>步骤六：在目标服务器上设置只能使用密钥登陆</h4>
+
+
+
+<h4 id="补充-补充一-修改复杂-ssh-密钥密码的方法补充二-显示已生成的-ssh-密钥的加密方式">补充：<br>补充一：修改复杂 SSH 密钥密码的方法<br>补充二：显示已生成的 SSH 密钥的加密方式</h4>
+
+
+
+<h2 id="具体的步骤">具体的步骤：</h2>
+
+
+
+<h4 id="步骤一-生成复杂的-ssh-密钥">步骤一：生成复杂的 SSH 密钥</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh-keygen -b 4096 -t rsa -C "&lt;content&gt;" -f "&lt;public private key name&gt;"</code></pre>
+
+
+
+<p>（注意：在生成复杂 SSH 密钥的时候最好也设置它的使用密码）</p>
+
+
+
+<h4 id="步骤二-将生成的复杂-ssh-密钥移动到指定位置">步骤二：将生成的复杂 SSH 密钥移动到指定位置</h4>
+
+
+
+<pre class="wp-block-code"><code># mv &lt;public private key name&gt;* ~/.ssh/</code></pre>
+
+
+
+<h4 id="步骤三-给部署好的复杂-ssh-密钥设置权限">步骤三：给部署好的复杂 SSH 密钥设置权限</h4>
+
+
+
+<pre class="wp-block-code"><code># chmod -R 600 ~/.ssh/&lt;public private key name&gt;*</code></pre>
+
+
+
+<h4 id="步骤四-将复杂的-ssh-公钥拷贝到目标服务器">步骤四：将复杂的 SSH 公钥拷贝到目标服务器</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh-copy-id -i ~/.ssh/&lt;public private key name&gt;.pub &lt;destination IP address&gt;</code></pre>
+
+
+
+<h4 id="步骤五-指定复杂-ssh-密钥登陆目标服务器">步骤五：指定复杂 SSH 密钥登陆目标服务器</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh -i ~/.ssh/&lt;public private key name&gt; &lt;destination IP address&gt;</code></pre>
+
+
+
+<h4 id="步骤六-在目标服务器上设置只能使用密钥登陆">步骤六：在目标服务器上设置只能使用密钥登陆</h4>
+
+
+
+<pre class="wp-block-code"><code># vim /etc/ssh/sshd_conf</code></pre>
+
+
+
+<p>将其中的：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+# PasswordAuthentication yes
+......
+# ChallengeResponseAuthentication yes
+......</code></pre>
+
+
+
+<p>修改为：</p>
+
+
+
+<pre class="wp-block-code"><code>......
+PasswordAuthentication no
+......
+ChallengeResponseAuthentication no
+......</code></pre>
+
+
+
+<h2 id="补充">补充：</h2>
+
+
+
+<h4 id="补充一-修改复杂-ssh-密钥密码的方法">补充一：修改复杂 SSH 密钥密码的方法</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh-keygen -p -f ~/.ssh/&lt;public private key name&gt;</code></pre>
+
+
+
+<p>（补充：无密码的 SSH 密钥也能通过此方法设置密码）</p>
+
+
+
+<h4 id="补充二-显示已生成的-ssh-密钥的加密方式">补充二：显示已生成的 SSH 密钥的加密方式</h4>
+
+
+
+<pre class="wp-block-code"><code># ssh-keygen -l -f ~/.ssh/&lt;public private key name&gt;</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 端口扫描工具 nmap 的使用 （转载）</title>
+		<link>https://eternalcenter-2022-02.github.io/nmap/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Wed, 08 Jan 2020 03:01:18 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=8014</guid>
+
+					<description><![CDATA[注意： 在使用 nmap 命令之前要先安装 nmap 软件包 注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来]]></description>
+										<content:encoded><![CDATA[
+<h2>注意：</h2>
+
+
+
+<p>在使用 nmap 命令之前要先安装 nmap 软件包 </p>
+
+
+
+<pre class="wp-block-code"><code>Nmap
+
+简介
+
+Nmap (“Network Mapper(网络映射器)”) 是一款开放源代码的 网络探测和安全审核的工具。它的设计目标是快速地扫描大型网络，当然用它扫描单个 主机也没有问题。Nmap以新颖的方式使用原始IP报文来发现网络上有哪些主机，那些 主机提供什么服务(应用程序名和版本)，那些服务运行在什么操作系统(包括版本信息)， 它们使用什么类型的报文过滤器/防火墙，以及一堆其它功能。虽然Nmap通常用于安全审核， 许多系统管理员和网络管理员也用它来做一些日常的工作，比如查看整个网络的信息， 管理服务升级计划，以及监视主机和服务的运行。
+
+用法
+
+sT 	 TCP connect()扫描，这种方式会在目标主机的日志中记录大批连接请求和错误信息。
+-sS 	 半开扫描，很少有系统能把它记入系统日志。不过，需要Root权限。
+-sF  -sN 	 秘密FIN数据包扫描、Xmas Tree、Null扫描模式
+-sP 	 ping扫描，Nmap在扫描端口时，默认都会使用ping扫描，只有主机存活，Nmap才会继续扫描。
+-sU 	 UDP扫描，但UDP扫描是不可靠的
+-sA 	 这项高级的扫描方法通常用来穿过防火墙的规则集
+-sV 	 探测端口服务版本
+-Pn 	 扫描之前不需要用ping命令，有些防火墙禁止ping命令。可以使用此选项进行扫描
+-v 	 显示扫描过程，推荐使用
+-h 	 帮助选项，是最清楚的帮助文档
+-p 	 指定端口，如“1-65535、1433、135、22、80”等
+-O 	 启用远程操作系统检测，存在误报
+-A 	 全面系统检测、启用脚本检测、扫描等
+-oN/-oX/-oG 	 将报告写入文件，分别是正常、XML、grepable 三种格式
+-T4 	 针对TCP端口禁止动态扫描延迟超过10ms
+-iL 	 读取主机列表，例如，“-iL C:\ip.txt”
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+
+端口扫描
+nmap默认发送一个ARP的PING数据包，来探测目标主机1-1000范围内所开放的所有端口
+
+nmap ip
+
+    1
+
+在这里插入图片描述
+
+nmap简单扫描，并对结果返回详细的描述输出
+
+nmap -vv IP
+
+    1
+
+在这里插入图片描述
+
+使用 -sT来实现tcp全连接扫描，与目标端口进行三次握手，尝试建立连接。如果建立连接成功，则说明端口开放，但是扫描速度慢。
+
+ nmap -sT ip
+
+    1
+
+在这里插入图片描述
+
+nmap 操作系统类型的探测
+
+nmap -O IP
+
+    1
+
+在这里插入图片描述
+
+nmap万能开关
+
+nmap -A IP
+
+    1
+
+
+root@kali:~# nmap -A 192.168.124.3
+Starting Nmap 7.70 ( https://nmap.org/ ) at 2018-09-27 04:27 EDT
+Nmap scan report for 192.168.124.3
+Host is up (0.044s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE      VERSION
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds Windows 10 Home China 10586 microsoft-ds (workgroup: WORKGROUP)
+MAC Address: F0:03:8C:09:C6:C9 (AzureWave Technology)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Microsoft Windows 10 1511 - 1607 (95%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows 10 1607 (92%), Microsoft Windows 10 1511 (92%), Microsoft Windows Server 2008 R2 or Windows 8.1 (92%), Microsoft Windows Server 2016 (92%), Microsoft Windows 7 Professional or Windows 8 (92%), Microsoft Windows Embedded Standard 7 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: Host: DESKTOP-ME19QK1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -2h39m59s, deviation: 4h37m07s, median: 0s
+|_nbstat: NetBIOS name: DESKTOP-ME19QK1, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: f0:03:8c:09:c6:c9 (AzureWave Technology)
+| smb-os-discovery: 
+|   OS: Windows 10 Home China 10586 (Windows 10 Home China 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: DESKTOP-ME19QK1
+|   NetBIOS computer name: DESKTOP-ME19QK1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2018-09-27T16:27:43+08:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-09-27 04:27:43
+|_  start_date: 2018-09-24 08:00:45
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   44.42 ms 192.168.124.3
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 79.39 seconds
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+    17
+    18
+    19
+    20
+    21
+    22
+    23
+    24
+    25
+    26
+    27
+    28
+    29
+    30
+    31
+    32
+    33
+    34
+    35
+    36
+    37
+    38
+    39
+    40
+    41
+    42
+    43
+
+SYN扫描（-sS），也被称为 “半开连接”或者 “SYN stealth”。nmap发送syn包后等待回应，如果接受SYS/ACK包说明端口开放，如果收到RST包，说明端口关闭，如果没有回应或者回应icmp不可达错误信息，则说明端口被过滤。
+
+nmap -sS IP
+
+    1
+
+NULL扫描
+
+nmap -sN IP
+
+    1
+
+探测服务版本
+
+nmap -sV IP
+————————————————
+版权声明：本文为CSDN博主「孤君」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/Wu000999/article/details/82859621</code></pre>
+
+
+
+<p>注明：所有转载内容皆直接从被转载文章网页的标题和内容的文本中复制而来</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img width="1014" height="238" src="https://eternalcenter-2022-02.github.io/wp-content/uploads/2020/03/版权生命证明-nmap.png" alt="" class="wp-image-8576" srcset="https://eternalcenter-2022-02.github.io/wp-content/uploads/2020/03/版权生命证明-nmap.png 1014w, https://eternalcenter-2022-02.github.io/wp-content/uploads/2020/03/版权生命证明-nmap-300x70.png 300w, https://eternalcenter-2022-02.github.io/wp-content/uploads/2020/03/版权生命证明-nmap-768x180.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>CC 4.0 BY-SA 版权协议网址：https://creativecommons.org/licenses/by-sa/4.0/deed.z</figcaption></figure></div>
+
+
+
+<pre class="wp-block-code"><code>站主补充：
+案例一：扫描某一台服务器的所有 UDP 端口
+# nmap -sU 192.168.1.1 -Pn
+
+（补充：这里以扫描 192.168.1.1 为例，这里的 -Pn 是指不测试 icmp 而直接测试端口）
+
+案例二：扫描某一台服务器的所有 TCP 端口
+# nmap -sT 192.168.1.1 -Pn
+
+（补充：这里以扫描 192.168.1.1 为例，这里的 -Pn 是指不测试 icmp 而直接测试端口）
+
+案例三：扫描某一台服务器某一个 UDP 端口
+# nmap -sU 192.168.1.1 -p 161 -Pn
+
+（补充：这里以扫描 192.168.1.1 为例，这里的 -Pn 是指不测试 icmp 而直接测试端口）
+
+案例四：扫描某一台服务器某一个 TCP 端口
+# nmap -sU 192.168.1.1 -t 443 -Pn
+
+（补充：这里以扫描 192.168.1.1 为例，这里的 -Pn 是指不测试 icmp 而直接测试端口）
+
+案例五：扫描某一台服务器多个 TCP 端口
+# nmap -sU 192.168.1.1 -t 1-65535 -Pn
+
+（补充：这里以扫描 192.168.1.1 为例，这里的 -Pn 是指不测试 icmp 而直接测试端口）
+
+案例六：扫描多个 IP 地址
+6.1 一次性扫描多个 IP 地址
+# nmap 192.168.1.1 192.168.1.2 192.168.1.3
+
+或者：
+
+# nmap 192.168.1.1,2,3
+
+或者：
+
+# nmap 192.168.1.1-3
+
+（补充：这里以扫描 192.168.1.1、192.168.1.2、192.168.1.3 为例）
+
+6.2 扫描某一个网段
+
+# nmap 192.168.1.0/24
+
+(补充：这里以扫描 192.168.1.0 网段为例)
+
+6.3 扫描某一个文件里记录的 IP 地址
+# cat ip_list.txt
+192.168.1.1
+192.168.1.2
+# nmap -iL ip_list.txt 
+
+（补充：这里以扫描 ip_list.txt 文本里 192.168.1.1 和 192.168.1.2 IP 地址为例）
+
+案例七：扫描时排除 IP 地址
+7.1 扫描时排除某一个 IP 地址
+# nmap 192.168.1.1-192.168.1.5 --exclude 192.168.1.3
+
+（补充：这里以扫描 192.168.1.1 到 192.168.1.5 但排除 192.168.1.3 为例）
+
+7.1 扫描时排除多个 IP 地址
+# nmap 192.168.1.1-192.168.1.5 --exclude 192.168.1.3,192.168.1.4
+
+或者：
+
+# nmap 192.168.1.1-192.168.1.5 --exclude 192.168.1.3,4
+
+或者：
+
+# nmap 192.168.1.1-192.168.1.5 --exclude 192.168.1.3-4
+
+（补充：这里以扫描 192.168.1.1 到 192.168.1.5 但排除 192.168.1.3 和 192.168.1.4 为例）
+
+6.3 扫描时排除某一个文件里记录的 IP 地址
+# cat ip_list.txt
+192.168.1.3
+192.168.1.4
+# nmap 192.168.1.1-192.168.1.5 --excludefile ip_list.txt 
+
+（补充：这里以扫描 192.168.1.1 到 192.168.1.5，但是排除 ip_list.txt 文本里 192.168.1.1 和 192.168.1.2 IP 地址为例）</code></pre>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[命令] Linux 命令 firewall-cmd （设置防火墙）</title>
+		<link>https://eternalcenter-2022-02.github.io/firewall-cmd/</link>
+		
+		<dc:creator><![CDATA[Mingyu Zhu]]></dc:creator>
+		<pubDate>Sat, 14 Dec 2019 16:37:51 +0000</pubDate>
+				<category><![CDATA[Chinese (中文)]]></category>
+		<category><![CDATA[System (系统)]]></category>
+		<category><![CDATA[System Firewall (系统防火墙)]]></category>
+		<category><![CDATA[System Network (系统网络)]]></category>
+		<category><![CDATA[System Network & System Security & System Log (系统网络 & 系统安全 & 系统日志)]]></category>
+		<category><![CDATA[System Port Security (系统端口安全)]]></category>
+		<category><![CDATA[System Security (系统安全)]]></category>
+		<guid isPermaLink="false">https://eternalcenter-2022-02.github.io/?p=7959</guid>
+
+					<description><![CDATA[内容目录： 内容一：防火墙信息查询1.1 防火墙运行状态查询1.2 显示防火墙紧急模式是否开启（是否拒绝所有网络）1.3 防火墙默认信息查询1.3.1 显示防火墙的所有区域1.3.2 显示防火墙支持的所有服务1.3.3 显示防火墙支持的所有 icmp 协议1.4 显示防火墙当前所在的区域1.5 显示防火墙的策略1.5.1 显示防火墙当前所在的区域的所有策略1.5.2 显示所有区域的所有策略1.5.3 显示某一个区域的策略1.5.3.1 显示某一个区域的策略的格式1.5.3.2 显示某一个区域的策略的案例1.5.4 显示某一个区域某一个服务的策略1.5.4.1 显示某一个区域某一个服务的策略的格式1.5.4.2 显示某一个区域某一个服务的策略的案例1.6 显示网卡所在的区域1.6.1 显示哪些区域被放入了网卡1.6.2 显示某一个网卡所属的区域1.6.2.1 显示某一个网卡所属的区域的格式1.6.2.2 显示某一个网卡所属的区域的案例 内容二： 区域的网卡管理2.1 显示网卡所在的区域2.1.1 显示哪些区域处于激活状态2.1.2 显示某一个网卡所属的区域2.1.2.1 显示某一个网卡所属的区域的格式2.1.2.2 显示某一个网卡所属的区域的案例2.2 将某一个网卡放入某一个区域2.2.1 将某一个网卡放入某一个区域的格式2.2.2 将某一个网卡放入某一个区域的案例2.3 将某一个网卡从某一个区域删除2.3.1 将某一个网卡从某一个区域删除的格式2.3.2 将某一个网卡从某一个区域删除的案例 内容三：防火墙区域设置3.1 显示防火墙目前所在的区域3.2 指定防火墙的区域3.2.1 指定防火墙的区域的格式3.2.2 指定防火墙的区域的案例 内容四：防火墙暂时策略设置（防火墙重启后失效）4.1 开放策略相关4.1.1 暂时开放端口4.1.1.1 暂时在防火墙当前所在区域里开放某一个端口4.1.1.1.1 暂时在防火墙当前所在区域里开放某一个端口的格式4.1.1.1.2 暂时在防火墙当前所在区域里开放某一个端口的案例4.1.1.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口4.1.1.2.1 暂时在防火墙当前所在区域里开放某一个服务的所有端口的格式4.1.1.2.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口的案例4.1.1.3 暂时在防火墙当前所在区域里对某个网段开放某一个端口4.1.1.3.1 暂时在防火墙当前所在区域里对某个网段开放某一个端口的格式4.1.1.3.2 暂时在防火墙当前所在区域里对某个网段开放某一个端口的案例4.1.1.4 &#8230; <p class="link-more"><a href="https://eternalcenter-2022-02.github.io/firewall-cmd/" class="more-link">Continue reading<span class="screen-reader-text"> "[命令] Linux 命令 firewall-cmd （设置防火墙）"</span></a></p>]]></description>
+										<content:encoded><![CDATA[
+<h2 id="内容目录">内容目录：</h2>
+
+
+
+<h4 id="内容一-防火墙信息查询1-1-防火墙运行状态查询1-2-显示防火墙紧急模式是否开启-是否拒绝所有网络-1-3-防火墙默认信息查询1-3-1-显示防火墙的所有区域1-3-2-显示防火墙支持的所有服务1-3-3-显示防火墙支持的所有-icmp-协议1-4-显示防火墙当前所在的区域1-5-显示防火墙的策略1-5-1-显示防火墙当前所在的区域的所有策略1-5-2-显示所有区域的所有策略1-5-3-显示某一个区域的策略1-5-3-1-显示某一个区域的策略的格式1-5-3-2-显示某一个区域的策略的案例1-5-4-显示某一个区域某一个服务的策略1-5-4-1-显示某一个区域某一个服务的策略的格式1-5-4-2-显示某一个区域某一个服务的策略的案例1-6-显示网卡所在的区域1-6-1-显示哪些区域被放入了网卡1-6-2-显示某一个网卡所属的区域1-6-2-1-显示某一个网卡所属的区域的格式1-6-2-2-显示某一个网卡所属的区域的案例">内容一：防火墙信息查询<br>1.1 防火墙运行状态查询<br>1.2 显示防火墙紧急模式是否开启（是否拒绝所有网络）<br>1.3 防火墙默认信息查询<br>1.3.1 显示防火墙的所有区域<br>1.3.2 显示防火墙支持的所有服务<br>1.3.3 显示防火墙支持的所有 icmp 协议<br>1.4 显示防火墙当前所在的区域<br>1.5 显示防火墙的策略<br>1.5.1 显示防火墙当前所在的区域的所有策略<br>1.5.2 显示所有区域的所有策略<br>1.5.3 显示某一个区域的策略<br>1.5.3.1 显示某一个区域的策略的格式<br>1.5.3.2 显示某一个区域的策略的案例<br>1.5.4 显示某一个区域某一个服务的策略<br>1.5.4.1 显示某一个区域某一个服务的策略的格式<br>1.5.4.2 显示某一个区域某一个服务的策略的案例<br>1.6 显示网卡所在的区域<br>1.6.1 显示哪些区域被放入了网卡<br>1.6.2 显示某一个网卡所属的区域<br>1.6.2.1 显示某一个网卡所属的区域的格式<br>1.6.2.2 显示某一个网卡所属的区域的案例</h4>
+
+
+
+<h4 id="内容二-区域的网卡管理2-1-显示网卡所在的区域2-1-1-显示哪些区域处于激活状态2-1-2-显示某一个网卡所属的区域2-1-2-1-显示某一个网卡所属的区域的格式2-1-2-2-显示某一个网卡所属的区域的案例2-2-将某一个网卡放入某一个区域2-2-1-将某一个网卡放入某一个区域的格式2-2-2-将某一个网卡放入某一个区域的案例2-3-将某一个网卡从某一个区域删除2-3-1-将某一个网卡从某一个区域删除的格式2-3-2-将某一个网卡从某一个区域删除的案例">内容二： 区域的网卡管理<br>2.1 显示网卡所在的区域<br>2.1.1 显示哪些区域处于激活状态<br>2.1.2 显示某一个网卡所属的区域<br>2.1.2.1 显示某一个网卡所属的区域的格式<br>2.1.2.2 显示某一个网卡所属的区域的案例<br>2.2 将某一个网卡放入某一个区域<br>2.2.1 将某一个网卡放入某一个区域的格式<br>2.2.2 将某一个网卡放入某一个区域的案例<br>2.3 将某一个网卡从某一个区域删除<br>2.3.1 将某一个网卡从某一个区域删除的格式<br>2.3.2 将某一个网卡从某一个区域删除的案例</h4>
+
+
+
+<h4 id="内容三-防火墙区域设置3-1-显示防火墙目前所在的区域3-2-指定防火墙的区域3-2-1-指定防火墙的区域的格式3-2-2-指定防火墙的区域的案例">内容三：防火墙区域设置<br>3.1 显示防火墙目前所在的区域<br>3.2 指定防火墙的区域<br>3.2.1 指定防火墙的区域的格式<br>3.2.2 指定防火墙的区域的案例</h4>
+
+
+
+<h4 id="内容四-防火墙暂时策略设置-防火墙重启后失效-4-1-开放策略相关4-1-1-暂时开放端口4-1-1-1-暂时在防火墙当前所在区域里开放某一个端口4-1-1-1-1-暂时在防火墙当前所在区域里开放某一个端口的格式4-1-1-1-2-暂时在防火墙当前所在区域里开放某一个端口的案例4-1-1-2-暂时在防火墙当前所在区域里开放某一个服务的所有端口4-1-1-2-1-暂时在防火墙当前所在区域里开放某一个服务的所有端口的格式4-1-1-2-2-暂时在防火墙当前所在区域里开放某一个服务的所有端口的案例4-1-1-3-暂时在防火墙当前所在区域里对某个网段开放某一个端口4-1-1-3-1-暂时在防火墙当前所在区域里对某个网段开放某一个端口的格式4-1-1-3-2-暂时在防火墙当前所在区域里对某个网段开放某一个端口的案例4-1-1-4-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口4-1-1-4-1-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口的格式4-1-1-4-2-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口的案例4-1-1-5-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口4-1-1-5-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的格式4-1-1-5-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的案例4-1-2-暂时关闭已开放的端口4-1-2-1-暂时在防火墙当前所在区域里关闭已开放的某一个端口4-1-2-1-1-暂时在防火墙当前所在区域里关闭已开放的某一个端口的格式4-1-2-1-2-暂时在防火墙当前所在区域里关闭已开放的某一个端口的案例4-1-2-2-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口4-1-2-2-1-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的格式4-1-2-2-2-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的案例4-1-2-3-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口4-1-2-3-1-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口的格式4-1-2-3-2-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放的某一个端口的案例4-1-2-4-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口4-1-2-4-1-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口的格式4-1-2-4-2-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口的案例4-1-2-5-暂时在防火墙当前所在区域里关闭对除了某一个-ip-地址外的-ip-地址开放多个端口4-1-2-5-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的格式4-1-2-5-2-暂时在防火墙当前所在区域里关闭对除了某一个-ip-地址外的-ip-地址开放多个端口的案例4-2-拒绝策略相关4-2-1-暂时拒绝端口4-2-1-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口4-2-1-1-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式4-2-1-1-2-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例4-2-1-2-暂时在防火墙当前所在区域里对某一个-ip-地址拒绝多个端口4-2-1-2-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式4-2-1-2-2-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例4-2-1-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口4-2-1-2-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口的格式4-2-1-2-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口的案例4-2-2-暂时撤销已拒绝端口4-2-2-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口4-2-2-1-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式4-2-2-1-2-暂时在防火墙当前所在区域里撤销撤销已设置的对某个网段拒绝某一个端口的案例4-2-2-2-暂时在防火墙当前所在区域里撤销已设置的对某一个-ip-地址拒绝多个端口4-2-2-2-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式4-2-2-1-2-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的案例4-2-3-2-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口4-2-3-2-1-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口的格式4-2-2-3-2-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口的案例4-3-转发策略相关4-3-1-开启防火墙转发策略4-3-2-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口4-3-2-1-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口的格式4-3-2-2-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口的案例4-3-3-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口4-3-3-1-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口的格式4-3-3-2-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口的案例">内容四：防火墙暂时策略设置（防火墙重启后失效）<br>4.1 开放策略相关<br>4.1.1 暂时开放端口<br>4.1.1.1 暂时在防火墙当前所在区域里开放某一个端口<br>4.1.1.1.1 暂时在防火墙当前所在区域里开放某一个端口的格式<br>4.1.1.1.2 暂时在防火墙当前所在区域里开放某一个端口的案例<br>4.1.1.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口<br>4.1.1.2.1 暂时在防火墙当前所在区域里开放某一个服务的所有端口的格式<br>4.1.1.2.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口的案例<br>4.1.1.3 暂时在防火墙当前所在区域里对某个网段开放某一个端口<br>4.1.1.3.1 暂时在防火墙当前所在区域里对某个网段开放某一个端口的格式<br>4.1.1.3.2 暂时在防火墙当前所在区域里对某个网段开放某一个端口的案例<br>4.1.1.4 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口<br>4.1.1.4.1 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口的格式<br>4.1.1.4.2 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口的案例<br>4.1.1.5 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口<br>4.1.1.5.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的格式<br>4.1.1.5.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的案例<br>4.1.2 暂时关闭已开放的端口<br>4.1.2.1 暂时在防火墙当前所在区域里关闭已开放的某一个端口<br>4.1.2.1.1 暂时在防火墙当前所在区域里关闭已开放的某一个端口的格式<br>4.1.2.1.2 暂时在防火墙当前所在区域里关闭已开放的某一个端口的案例<br>4.1.2.2 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口<br>4.1.2.2.1 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的格式<br>4.1.2.2.2 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的案例<br>4.1.2.3 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口<br>4.1.2.3.1 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口的格式<br>4.1.2.3.2 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放的某一个端口的案例<br>4.1.2.4 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口<br>4.1.2.4.1 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口的格式<br>4.1.2.4.2 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口的案例<br>4.1.2.5 暂时在防火墙当前所在区域里关闭对除了某一个 IP 地址外的 IP 地址开放多个端口<br>4.1.2.5.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的格式<br>4.1.2.5.2 暂时在防火墙当前所在区域里关闭对除了某一个 IP 地址外的 IP 地址开放多个端口的案例<br>4.2 拒绝策略相关<br>4.2.1 暂时拒绝端口<br>4.2.1.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口<br>4.2.1.1.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式<br>4.2.1.1.2 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例<br>4.2.1.2 暂时在防火墙当前所在区域里对某一个 IP 地址拒绝多个端口<br>4.2.1.2.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式<br>4.2.1.2.2 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例<br>4.2.1.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口<br>4.2.1.2.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口的格式<br>4.2.1.2.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口的案例<br>4.2.2 暂时撤销已拒绝端口<br>4.2.2.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口<br>4.2.2.1.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式<br>4.2.2.1.2 暂时在防火墙当前所在区域里撤销撤销已设置的对某个网段拒绝某一个端口的案例<br>4.2.2.2 暂时在防火墙当前所在区域里撤销已设置的对某一个 IP 地址拒绝多个端口<br>4.2.2.2.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式<br>4.2.2.1.2 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的案例<br>4.2.3.2 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口<br>4.2.3.2.1 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口的格式<br>4.2.2.3.2 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口的案例<br>4.3 转发策略相关<br>4.3.1 开启防火墙转发策略<br>4.3.2 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口<br>4.3.2.1 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口的格式<br>4.3.2.2 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口的案例<br>4.3.3 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口<br>4.3.3.1 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口的格式<br>4.3.3.2 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口的案例</h4>
+
+
+
+<h4 id="内容五-防火墙暂时禁止-icmp-的设置5-1-防火墙暂时禁止-icmp5-2-防火墙暂时取消禁止-icmp">内容五：防火墙暂时禁止 icmp 的设置<br>5.1 防火墙暂时禁止 icmp<br>5.2 防火墙暂时取消禁止 icmp</h4>
+
+
+
+<h4 id="内容六-防火墙紧急模式的管理-拒绝所有网络-6-1-防火墙开启紧急模式-拒绝所有网络-6-2-防火墙取消紧急模式-取消拒绝所有网络-6-3-显示防火墙紧急模式是否开启-是否拒绝所有网络">内容六：防火墙紧急模式的管理（拒绝所有网络）<br>6.1 防火墙开启紧急模式（拒绝所有网络）<br>6.2 防火墙取消紧急模式（取消拒绝所有网络）<br>6.3 显示防火墙紧急模式是否开启（是否拒绝所有网络）</h4>
+
+
+
+<h4 id="内容七-将防火墙暂时策略的设置方法转换成永久策略和限时策略的设置方法7-1-防火墙暂时策略的设置方法7-2-防火墙永久策略的设置7-3-防火墙限时策略的设置">内容七：将防火墙暂时策略的设置方法转换成永久策略和限时策略的设置方法<br>7.1 防火墙暂时策略的设置方法<br>7.2 防火墙永久策略的设置<br>7.3 防火墙限时策略的设置</h4>
+
+
+
+<h4 id="内容八-防火墙策略的加载8-1-使用防火墙命令加载策略8-2-在系统层面上重启防火墙以加载策略">内容八：防火墙策略的加载<br>8.1 使用防火墙命令加载策略<br>8.2 在系统层面上重启防火墙以加载策略</h4>
+
+
+
+<h4 id="相关链接-与-firewall-cmd-相关的-shell-脚本">相关链接：与 firewall-cmd 相关的 shell 脚本</h4>
+
+
+
+<h2 id="具体的内容">具体的内容：</h2>
+
+
+
+<h4 id="内容一-防火墙信息查询1-1-防火墙运行状态查询">内容一：防火墙信息查询<br>1.1 防火墙运行状态查询</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –state</code></pre>
+
+
+
+<h4 id="1-2-显示防火墙紧急模式是否开启-是否拒绝所有网络">1.2 显示防火墙紧急模式是否开启（是否拒绝所有网络）</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –query-panic</code></pre>
+
+
+
+<h4 id="1-3-防火墙默认信息查询1-3-1-显示防火墙的所有区域">1.3 防火墙默认信息查询<br>1.3.1 显示防火墙的所有区域</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-zones</code></pre>
+
+
+
+<h4 id="1-3-2-显示防火墙支持的所有服务">1.3.2 显示防火墙支持的所有服务</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-services</code></pre>
+
+
+
+<h4 id="1-3-3-显示防火墙支持的所有-icmp-协议">1.3.3 显示防火墙支持的所有 icmp 协议</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-icmptypes</code></pre>
+
+
+
+<h4 id="1-4-显示防火墙当前所在的区域">1.4 显示防火墙当前所在的区域</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-default-zone</code></pre>
+
+
+
+<h4 id="1-5-显示防火墙的策略1-5-1-显示防火墙当前所在的区域的所有策略">1.5 显示防火墙的策略<br>1.5.1 显示防火墙当前所在的区域的所有策略</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --list-all</code></pre>
+
+
+
+<h4 id="1-5-2-显示所有区域的所有策略">1.5.2 显示所有区域的所有策略</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --list-all-zones</code></pre>
+
+
+
+<h4 id="1-5-3-显示某一个区域的策略1-5-3-1-显示某一个区域的策略的格式">1.5.3 显示某一个区域的策略<br>1.5.3.1 显示某一个区域的策略的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=&lt;zone&gt; --list-all</code></pre>
+
+
+
+<h4 id="1-5-3-2-显示某一个区域的策略的案例">1.5.3.2 显示某一个区域的策略的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --list-all</code></pre>
+
+
+
+<p>（补充：这里以显示 public 区域的策略为例）</p>
+
+
+
+<h4 id="1-5-4-显示某一个区域某一个服务的策略1-5-4-1-显示某一个区域某一个服务的策略的格式">1.5.4 显示某一个区域某一个服务的策略<br>1.5.4.1 显示某一个区域某一个服务的策略的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=&lt;zone&gt; --query-service=&lt;service&gt;</code></pre>
+
+
+
+<h4 id="1-5-4-2-显示某一个区域某一个服务的策略的案例">1.5.4.2 显示某一个区域某一个服务的策略的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --query-service=https</code></pre>
+
+
+
+<p>（补充：这里以显示 public 区域的 https 服务的策略为例）</p>
+
+
+
+<h4 id="1-6-显示网卡所在的区域1-6-1-显示哪些区域被放入了网卡">1.6 显示网卡所在的区域<br>1.6.1 显示哪些区域被放入了网卡</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-active-zones</code></pre>
+
+
+
+<p>（注意：只有放入了网卡的区域才会处于激活状态）</p>
+
+
+
+<h4 id="1-6-2-显示某一个网卡所属的区域1-6-2-1-显示某一个网卡所属的区域的格式">1.6.2 显示某一个网卡所属的区域<br>1.6.2.1 显示某一个网卡所属的区域的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –get-zone-of-interface=&lt;network card&gt;</code></pre>
+
+
+
+<h4 id="1-6-2-2-显示某一个网卡所属的区域的案例">1.6.2.2 显示某一个网卡所属的区域的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-zone-of-interface=eth0</code></pre>
+
+
+
+<p>（补充：这里以显示 eth0 网卡属于哪一个区域为例）</p>
+
+
+
+<h4 id="内容二-区域的网卡管理2-1-显示网卡所在的区域2-1-1-显示哪些区域被放入了网卡">内容二： 区域的网卡管理<br>2.1 显示网卡所在的区域<br>2.1.1 显示哪些区域被放入了网卡</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-active-zones</code></pre>
+
+
+
+<p>（注意：只有放入了网卡的区域才会处于激活状态）</p>
+
+
+
+<h4 id="2-1-2-显示某一个网卡所属的区域2-1-2-1-显示某一个网卡所属的区域的格式">2.1.2 显示某一个网卡所属的区域<br>2.1.2.1 显示某一个网卡所属的区域的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –get-zone-of-interface=&lt;network card&gt;</code></pre>
+
+
+
+<h4 id="2-1-2-2-显示某一个网卡所属的区域的案例">2.1.2.2 显示某一个网卡所属的区域的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-zone-of-interface=eth0</code></pre>
+
+
+
+<p>（补充：这里以显示 eth0 网卡属于哪一个区域为例）</p>
+
+
+
+<h4 id="2-2-将某一个网卡放入某一个区域2-2-1-将某一个网卡放入某一个区域的格式">2.2 将某一个网卡放入某一个区域<br>2.2.1 将某一个网卡放入某一个区域的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=&lt;zone&gt; --add-interface=&lt;network card&gt;</code></pre>
+
+
+
+<h4 id="2-2-2-将某一个网卡放入某一个区域的案例">2.2.2 将某一个网卡放入某一个区域的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-interface=eth0</code></pre>
+
+
+
+<p>（补充：这里以往 public 区域里加入 eth0 网卡为例）</p>
+
+
+
+<h4 id="2-3-将某一个网卡从某一个区域删除2-3-1-将某一个网卡从某一个区域删除的格式">2.3 将某一个网卡从某一个区域删除<br>2.3.1 将某一个网卡从某一个区域删除的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=&lt;zone&gt; --remove-interface=&lt;network card&gt;</code></pre>
+
+
+
+<h4 id="2-3-2-将某一个网卡从某一个区域删除的案例">2.3.2 将某一个网卡从某一个区域删除的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --remove-interface=eth0</code></pre>
+
+
+
+<p>（补充：这里以从 public 区域删除 eth0 网卡为例）</p>
+
+
+
+<h4 id="内容三-防火墙区域设置3-1-显示防火墙目前所在的区域">内容三：防火墙区域设置<br>3.1 显示防火墙目前所在的区域</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --get-default</code></pre>
+
+
+
+<h4 id="3-2-指定防火墙的区域3-2-1-指定防火墙的区域的格式">3.2 指定防火墙的区域<br>3.2.1 指定防火墙的区域的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --set-default=&lt;zone&gt;</code></pre>
+
+
+
+<h4 id="3-2-2-指定防火墙的区域的案例">3.2.2 指定防火墙的区域的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --set-default=public</code></pre>
+
+
+
+<p>（补充：这里以将默认区域设置为 public 为例）</p>
+
+
+
+<h4 id="内容四-防火墙暂时策略设置-防火墙重启后失效">内容四：防火墙暂时策略设置（防火墙重启后失效）</h4>
+
+
+
+<p>（注意：防火墙的规则没有现后之分，但是拒绝规则永远高于允许规则）</p>
+
+
+
+<h4 id="4-1-开放策略相关4-1-1-暂时开放端口4-1-1-1-暂时在防火墙当前所在区域里开放某一个端口4-1-1-1-1-暂时在防火墙当前所在区域里开放某一个端口的格式">4.1 开放策略相关<br>4.1.1 暂时开放端口<br>4.1.1.1 暂时在防火墙当前所在区域里开放某一个端口<br>4.1.1.1.1 暂时在防火墙当前所在区域里开放某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-port=&lt;port&gt;/tcp</code></pre>
+
+
+
+<h4 id="4-1-1-1-2-暂时在防火墙当前所在区域里开放某一个端口的案例">4.1.1.1.2 暂时在防火墙当前所在区域里开放某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-port=80/tcp</code></pre>
+
+
+
+<p>（补充：这里以暂时添加 80/TCP 端口为例）</p>
+
+
+
+<h4 id="4-1-1-2-暂时在防火墙当前所在区域里开放某一个服务的所有端口4-1-1-2-1-暂时在防火墙当前所在区域里开放某一个服务的所有端口的格式">4.1.1.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口<br>4.1.1.2.1 暂时在防火墙当前所在区域里开放某一个服务的所有端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-service=&lt;service&gt;</code></pre>
+
+
+
+<h4 id="4-1-1-2-2-暂时在防火墙当前所在区域里开放某一个服务的所有端口号的案例">4.1.1.2.2 暂时在防火墙当前所在区域里开放某一个服务的所有端口号的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-service=http</code></pre>
+
+
+
+<p>（补充：这里以暂时添加 http 服务为例）</p>
+
+
+
+<h4 id="4-1-1-3-暂时在防火墙当前所在区域里对某个网段开放某一个端口4-1-1-3-1-暂时在防火墙当前所在区域里对某个网段开放某一个端口的格式">4.1.1.3 暂时在防火墙当前所在区域里对某个网段开放某一个端口<br>4.1.1.3.1 暂时在防火墙当前所在区域里对某个网段开放某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-1-3-2-暂时在防火墙当前所在区域里对某个网段开放某一个端口的案例">4.1.1.3.2 暂时在防火墙当前所在区域里对某个网段开放某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol="tcp" port="80" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对 192.168.1.0/24 开放 80/tcp 端口为例）</p>
+
+
+
+<h4 id="4-1-1-4-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口4-1-1-4-1-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口的格式">4.1.1.4 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口<br>4.1.1.4.1 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-1-4-2-暂时在防火墙当前所在区域里对某一个-ip-地址开放多个端口的案例">4.1.1.4.2 暂时在防火墙当前所在区域里对某一个 IP 地址开放多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对 192.168.1.1 开放 0/tcp 到 65535/tcp 端口为例）</p>
+
+
+
+<h4 id="4-1-1-5-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口4-1-1-5-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的格式">4.1.1.5 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口<br>4.1.1.5.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-1-5-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的案例">4.1.1.5.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对非 192.168.1.1 开放 0/tcp 到 65535/tcp 端口为例）</p>
+
+
+
+<h4 id="4-1-2-暂时关闭已开放的端口4-1-2-1-暂时在防火墙当前所在区域里关闭已开放的某一个端口4-1-2-1-1-暂时在防火墙当前所在区域里关闭已开放的某一个端口的格式">4.1.2 暂时关闭已开放的端口<br>4.1.2.1 暂时在防火墙当前所在区域里关闭已开放的某一个端口<br>4.1.2.1.1 暂时在防火墙当前所在区域里关闭已开放的某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-port=&lt;port&gt;/tcp</code></pre>
+
+
+
+<h4 id="4-1-2-1-2-暂时在防火墙当前所在区域里关闭已开放的某一个端口的案例">4.1.2.1.2 暂时在防火墙当前所在区域里关闭已开放的某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-port=80/tcp</code></pre>
+
+
+
+<p>（补充：这里以暂时关闭 80/TCP 端口为例）</p>
+
+
+
+<h4 id="4-1-2-2-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口4-1-2-2-1-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的格式">4.1.2.2 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口<br>4.1.2.2.1 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-service=&lt;service&gt;</code></pre>
+
+
+
+<h4 id="4-1-2-2-2-暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口号的案例">4.1.2.2.2 暂时在防火墙当前所在区域里关闭已开放的某一个服务的所有端口号的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-service=http</code></pre>
+
+
+
+<p>（补充：这里以暂时关闭 http 服务为例）</p>
+
+
+
+<h4 id="4-1-2-3-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口4-1-2-3-1-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口的格式">4.1.2.3 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口<br>4.1.2.3.1 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="ipv4" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-2-3-2-暂时在防火墙当前所在区域里关闭已开放的对某个网段开放的某一个端口的案例">4.1.2.3.2 暂时在防火墙当前所在区域里关闭已开放的对某个网段开放的某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol="tcp" port="80" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对 192.168.1.0/24 关闭 80/tcp 端口为例）</p>
+
+
+
+<h4 id="4-1-2-4-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口4-1-2-4-1-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口的格式">4.1.2.4 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口<br>4.1.2.4.1 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="ipv4" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-2-4-2-暂时在防火墙当前所在区域里关闭已开放的对某一个-ip-地址开放的多个端口的案例">4.1.2.4.2 暂时在防火墙当前所在区域里关闭已开放的对某一个 IP 地址开放的多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对 192.168.1.1 关闭 0/tcp 到 65535/tcp 端口为例）</p>
+
+
+
+<h4 id="4-1-2-5-暂时在防火墙当前所在区域里关闭对除了某一个-ip-地址外的-ip-地址开放多个端口4-1-2-5-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址开放多个端口的格式">4.1.2.5 暂时在防火墙当前所在区域里关闭对除了某一个 IP 地址外的 IP 地址开放多个端口<br>4.1.2.5.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址开放多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<h4 id="4-1-2-5-2-暂时在防火墙当前所在区域里关闭对除了某一个-ip-地址外的-ip-地址开放多个端口的案例">4.1.2.5.2 暂时在防火墙当前所在区域里关闭对除了某一个 IP 地址外的 IP 地址开放多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（补充：这里以暂时对非 192.168.1.1 关闭 0/tcp 到 65535/tcp 端口为例）</p>
+
+
+
+<h4 id="4-2-拒绝策略相关4-2-1-暂时拒绝端口4-2-1-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口4-2-1-1-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式">4.2 拒绝策略相关<br>4.2.1 暂时拒绝端口<br>4.2.1.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口<br>4.2.1.1.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-1-1-2-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例">4.2.1.1.2 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol=tcp port=80 drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol=tcp port=80 reject"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以在 public 区域拒绝 192.168.1.0/24 访问 80/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-2-1-2-暂时在防火墙当前所在区域里对某一个-ip-地址拒绝多个端口4-2-1-2-1-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式">4.2.1.2 暂时在防火墙当前所在区域里对某一个 IP 地址拒绝多个端口<br>4.2.1.2.1 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-1-2-2-暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例">4.2.1.2.2 暂时在防火墙当前所在区域里对某个网段拒绝某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol=tcp port="0-65535" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol=tcp port="0-65535" reject"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以在 public 区域拒绝 192.168.1.1 访问 0/tcp 到 65536/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-2-1-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口4-2-1-2-1-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口的格式">4.2.1.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口<br>4.2.1.2.1 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-1-2-2-暂时在防火墙当前所在区域里对除了某一个-ip-地址外的-ip-地址拒绝多个端口的案例">4.2.1.2.2 暂时在防火墙当前所在区域里对除了某一个 IP 地址外的 IP 地址拒绝多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以拒绝非 192.168.1.1 访问 0/tcp 到 65536/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-2-2-暂时撤销已拒绝端口4-2-2-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口4-2-2-1-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式">4.2.2 暂时撤销已拒绝端口<br>4.2.2.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口<br>4.2.2.1.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;network segment&gt;/&lt;subnet mask&gt;" port protocol="&lt;port protocol&gt;" port="&lt;port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-2-1-2-暂时在防火墙当前所在区域里撤销撤销已设置的对某个网段拒绝某一个端口的案例">4.2.2.1.2 暂时在防火墙当前所在区域里撤销撤销已设置的对某个网段拒绝某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol=tcp port=80 drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.0/24" port protocol=tcp port=80 reject"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以取消在 public 区域拒绝 192.168.1.1 访问 0/tcp 到 65536/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-2-2-2-暂时在防火墙当前所在区域里撤销已设置的对某一个-ip-地址拒绝多个端口4-2-2-2-1-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式">4.2.2.2 暂时在防火墙当前所在区域里撤销已设置的对某一个 IP 地址拒绝多个端口<br>4.2.2.2.1 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="&lt;network protocol&gt;" source address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-2-1-2-暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的案例">4.2.2.1.2 暂时在防火墙当前所在区域里撤销已设置的对某个网段拒绝某一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol=tcp port="0-65535" drop"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --zone=public --add-rich-rule="rule family="ipv4" source address="192.168.1.1" port protocol=tcp port="0-65535" reject"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以取消拒绝 192.168.1.1 访问 0/tcp 到 65536/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-2-3-2-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口4-2-3-2-1-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口的格式">4.2.3.2 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口<br>4.2.3.2.1 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" accept"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="&lt;network protocol&gt;" source NOT address="&lt;IP address&gt;" port protocol="&lt;port protocol&gt;" port="&lt;starting port&gt;-&lt;end port&gt;" reject"</code></pre>
+
+
+
+<p>（补充：这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应）</p>
+
+
+
+<h4 id="4-2-2-3-2-暂时在防火墙当前所在区域里撤销已设置的对除了某一个-ip-地址外的-ip-地址拒绝多个端口的案例">4.2.2.3.2 暂时在防火墙当前所在区域里撤销已设置的对除了某一个 IP 地址外的 IP 地址拒绝多个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>或者：</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule="rule family="ipv4" source NOT address="192.168.1.1" port protocol="tcp" port="0-65535" accept"</code></pre>
+
+
+
+<p>（<br>补充：<br>1) 这里以取消拒绝非 192.168.1.1 访问 0/tcp 到 65536/tcp 端口为例<br>2) 这里 drop 和 reject 的区别是 drop 收到数据包后直接丢掉不给发送方任何回应，而 drop 收到数据包后会给发送方发送一个拒绝的回应<br>）</p>
+
+
+
+<h4 id="4-3-转发策略相关4-3-1-开启防火墙转发策略">4.3 转发策略相关<br>4.3.1 开启防火墙转发策略</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-masquerade --permanent</code></pre>
+
+
+
+<p>（注意：只有开启了防火墙转发策略之后防火墙才能转发端口）</p>
+
+
+
+<h4 id="4-3-2-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口4-3-2-1-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口的格式">4.3.2 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口<br>4.3.2.1 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-forward-port=port=&lt;port&gt;:proto=&lt;port protocol&gt;:toport=&lt;port&gt;:toaddr=&lt;IP address&gt;</code></pre>
+
+
+
+<h4 id="4-3-2-2-暂时在防火墙当前所在区域里开启一个端口跳转到另一个-ip-地址的另一个端口的案例">4.3.2.2 暂时在防火墙当前所在区域里开启一个端口跳转到另一个 IP 地址的另一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080:toaddr=192.168.1.1</code></pre>
+
+
+
+<p>（补充：这里以将本地的 80 端口转向 192.168.1.1 的 8080 端口为例）</p>
+
+
+
+<h4 id="4-3-3-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口4-3-3-1-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口的格式">4.3.3 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口<br>4.3.3.1 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口的格式</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-forward-port=port=&lt;port&gt;:proto=&lt;port protocol&gt;:toport=&lt;port&gt;:toaddr=&lt;IP address&gt;</code></pre>
+
+
+
+<h4 id="4-3-3-2-暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个-ip-地址的另一个端口的案例">4.3.3.2 暂时在防火墙当前所在区域里关闭已开放的一个端口跳转到另一个 IP 地址的另一个端口的案例</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-forward-port=port=80:proto=tcp:toport=8080:toaddr=192.168.1.1</code></pre>
+
+
+
+<p>（补充：这里以取消将本地的 80 端口转向 192.168.1.1 的 8080 端口为例）</p>
+
+
+
+<h4 id="内容五-防火墙暂时禁止-icmp-的设置5-1-防火墙暂时禁止-icmp">内容五：防火墙暂时禁止 icmp 的设置<br>5.1 防火墙暂时禁止 icmp</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-rich-rule='rule protocol value=icmp drop'</code></pre>
+
+
+
+<h4 id="5-2-防火墙暂时取消禁止-icmp">5.2 防火墙暂时取消禁止 icmp</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --remove-rich-rule='rule protocol value=icmp drop'</code></pre>
+
+
+
+<h4 id="内容六-防火墙紧急模式的管理-拒绝所有网络-6-1-防火墙开启紧急模式-拒绝所有网络">内容六：防火墙紧急模式的管理（拒绝所有网络）<br>6.1 防火墙开启紧急模式（拒绝所有网络）</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –panic-on</code></pre>
+
+
+
+<h4 id="6-2-防火墙取消紧急模式-取消拒绝所有网络">6.2 防火墙取消紧急模式（取消拒绝所有网络）</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –panic-off</code></pre>
+
+
+
+<h4 id="6-3-显示防火墙紧急模式是否开启-是否拒绝所有网络">6.3 显示防火墙紧急模式是否开启（是否拒绝所有网络）</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd –query-panic</code></pre>
+
+
+
+<h4 id="内容七-将防火墙暂时策略的设置方法转换成永久策略和限时策略的设置方法7-1-防火墙暂时策略的设置方法">内容七：将防火墙暂时策略的设置方法转换成永久策略和限时策略的设置方法<br>7.1 防火墙暂时策略的设置方法</h4>
+
+
+
+<p>和内容一、内容二、内容三、内容四里的大部分设置命令一样，例</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-port=80/tcp</code></pre>
+
+
+
+<p>（补充：这里以临时添加 80/tcp 端口为例）</p>
+
+
+
+<h4 id="7-2-防火墙永久策略的设置">7.2 防火墙永久策略的设置</h4>
+
+
+
+<p>和内容一、内容二、内容三、内容四里的大部分设置命令一样，但是需要在后面添加 &#8211;permanent 参数，例</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-port=80/tcp --permanent</code></pre>
+
+
+
+<p>（补充：这里以永久添加 80/tcp 端口为例）</p>
+
+
+
+<p>（注意：永久策略设置后，防火墙要重新加载才会生效）</p>
+
+
+
+<h4 id="7-3-防火墙限时策略的设置">7.3 防火墙限时策略的设置</h4>
+
+
+
+<p>和内容一、内容二、内容三、内容四的大部分设置命令一样，但是需要在后面添加 &#8211;timeout=&lt;秒&gt; 参数，列</p>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --add-port=80/tcp --timeout=3600</code></pre>
+
+
+
+<p>（补充：这里以在 3600 秒期间添加 80/tcp 端口为例）</p>
+
+
+
+<p>（注意：此策略会在 3600 秒后失效）</p>
+
+
+
+<h4 id="内容八-防火墙策略的加载8-1-使用防火墙命令加载策略">内容八：防火墙策略的加载<br>8.1 使用防火墙命令加载策略</h4>
+
+
+
+<pre class="wp-block-code"><code># firewall-cmd --reload</code></pre>
+
+
+
+<p>（注意：此时暂时策略会失效，永久策略会生效）</p>
+
+
+
+<h4 id="8-2-在系统层面上重启防火墙以加载策略">8.2 在系统层面上重启防火墙以加载策略</h4>
+
+
+
+<pre class="wp-block-code"><code># systemctl retart firewalld</code></pre>
+
+
+
+<p>（注意：此时暂时策略会失效，永久策略会生效）</p>
+
+
+
+<h2 id="相关链接-与-firewall-cmd-相关的-shell-脚本">相关链接：与 firewall-cmd 相关的 shell 脚本</h2>
+
+
+
+<p class="has-small-font-size"><a href="https://eternalcenter-2022-02.github.io/?p=9937" target="_blank" rel="noreferrer noopener">Shell 在 firewalld 防火墙上批量对多个 IP 地址开发多个端口号</a></p>
+
+
+
+<p class="has-small-font-size"><a rel="noreferrer noopener" href="https://eternalcenter-2022-02.github.io/?p=9939" target="_blank">Shell 在 firewalld 防火墙上开放所有正在处于监听状态的端口号</a></p>
+
+
+
+<p class="has-small-font-size"><a href="https://eternalcenter-2022-02.github.io/?p=9941" target="_blank" rel="noreferrer noopener">Shell 在 firewalld 防火墙上取消所有已设置的复杂端口号策略</a></p>
+
+
+
+<p class="has-small-font-size"><a href="https://eternalcenter-2022-02.github.io/?p=9954" target="_blank" rel="noreferrer noopener">Shell 在 firewalld 防火墙上取消所有已开放的端口号</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
